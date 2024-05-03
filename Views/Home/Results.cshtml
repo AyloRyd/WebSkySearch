@@ -1,0 +1,59 @@
+﻿@using WebSkySearch.Models
+@using System.Text.Json;
+@model SearchResult
+
+<div class="results-container">
+    @if (Model?.Flights?.Count == 0)
+    {
+        <p>No flights found.</p>
+    }
+    else
+    {
+        @foreach (var flight in Model.Flights)
+        {
+            var timeSpan = TimeSpan.FromMinutes(flight.DurationinMinutes);
+
+            <div class="flight-card">
+                <div class="carriers">@string.Join(", ", flight.Carriers)</div>
+
+                <p class="time">
+                    @flight.DepartureTime.ToString("HH:mm") 
+                    <span class="time-day">@flight.DepartureTime.ToString("(dd.MM)")</span>
+                </p>
+
+                <div class="timeline">
+                    <div class="circle-top"></div>
+                    <div class="line"></div>
+                    <div class="circle-bottom"></div>
+                </div>
+
+                <p class="airport">@flight.OriginAirport.City (@flight.OriginAirport.Code)</p>
+
+                <p class="time">
+                    @flight.ArrivalTime.ToString("HH:mm")
+                    <span class="time-day">@flight.ArrivalTime.ToString("(dd.MM)")</span>
+                </p>
+
+                <p class="airport">@flight.DestinationAirport.City (@flight.DestinationAirport.Code)</p>
+
+                <div class="bottom-border"></div>
+
+                <section class="bottom-information">
+                    <div class="transfers-and-duration">
+                        <p class="transfers">@flight.StopCount tranfers</p>
+
+                        <p class="duration">@timeSpan.Hours:@timeSpan.Minutes Hours.</p>
+                    </div>
+                    <div class="price-and-booking-button">
+                        <p class="price">$@flight.Price</p>
+                        <form method="post" action="/Home/RedirectToBooking">
+                            <input type="hidden" name="flightData" 
+                                   value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))" />
+                            <button type="submit" class="booking-url">Book</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        }
+    }
+</div>

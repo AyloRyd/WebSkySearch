@@ -1,0 +1,148 @@
+﻿.results-container {
+    font-size: 13px;
+}
+
+.flight-card {
+    display: grid;
+    grid-template-columns: 4fr 1fr 12fr;
+    grid-template-rows: auto;
+    row-gap: 0.625em;
+    column-gap: 1.25em;
+    background: #232D3F;
+    border-radius: 1.25em;
+    padding: 1.25em;
+    padding-inline: 1.875em;
+    margin-top: 1.5em;
+    box-shadow: 0 0.3125em 0.9375em rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+}
+
+.carriers {
+    grid-column: span 3;
+    width: fit-content;
+    background-color: #005B41;
+    padding: 0.4375em;
+    padding-inline: 0.8125em;
+    border-radius: 1.125em;
+}
+
+.time {
+    grid-column: 1/2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 650;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.time-day {
+    margin-left: 0.4375em;
+    font-size: 0.65em;
+    font-weight: 400;
+}
+
+.airport {
+    grid-column: 3/4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.timeline {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-bottom, .circle-top {
+    width: 0.625em;
+    height: 0.625em;
+    border-radius: 50%;
+    border: 0.125em solid #fff;
+}
+
+.circle-bottom {
+    background-color: #fff;
+}
+
+.circle-top {
+    background-color: transparent;
+}
+
+.line {
+    width: 0.125em;
+    height: 3.125em;
+    background-color: #fff;
+}
+
+.bottom-border {
+    grid-column: span 3;
+    height: 0;
+    border-top: 0.01em solid #848484;
+    margin-inline: 1.35em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.bottom-information {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transfers-and-duration {
+    display: flex;
+    align-items: center;
+}
+
+.transfers {
+    width: fit-content;
+    background-color: #555555;
+    padding: 0.4375em;
+    padding-inline: 0.8125em;
+    border-radius: 1.125em;
+}
+
+.duration {
+    margin-left: 1.25em;
+    font-size: 1.375em;
+}
+
+.price-and-booking-button {
+    display: flex;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+    font-size: 2em;
+    color: white;
+    font-weight: 600;
+}
+
+.booking-url {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85em;
+    padding-inline: 1.5em;
+    font-size: 1.375em;
+    background-color: #005B41;
+    text-decoration: none;
+    color: white;
+    border-radius: 3.125em;
+    border: none;
+    transition: background-color 0.2s ease, padding-inline 0.2s ease;
+}
+
+.booking-url:hover {
+    background-color: #008170;
+    padding-inline: 2em;
+}

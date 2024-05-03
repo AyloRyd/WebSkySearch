@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\wwwroot\\css\\Results.css",
+      "PackagePath": "staticwebassets\\css\\Results.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\wwwroot\\css\\_Layout.css",
+      "PackagePath": "staticwebassets\\css\\_Layout.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\wwwroot\\images\\Flight-PNG-Image-HD.png",
+      "PackagePath": "staticwebassets\\images\\Flight-PNG-Image-HD.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\wwwroot\\images\\user-286.png",
+      "PackagePath": "staticwebassets\\images\\user-286.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebSkySearch.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebSkySearch.props",
+      "PackagePath": "build\\WebSkySearch.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebSkySearch.props",
+      "PackagePath": "buildMultiTargeting\\WebSkySearch.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebSkySearch.props",
+      "PackagePath": "buildTransitive\\WebSkySearch.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/_Layout.css" />
+    <link rel="stylesheet" href="~/css/Index.css" />
+    <link rel="stylesheet" href="~/css/Results.css" />
+    <link rel="icon" href="https://www.pngall.com/wp-content/uploads/8/Flight-PNG-Image-HD.png" type="image/x-icon">
+    <title>Sky Search</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a asp-controller="Home" asp-action="Index" class="hover-none">
+                <img src="@Url.Content("~/images/Flight-PNG-Image-HD.png")" alt="Site icon">
+                <span>Sky Search</span>
+            </a>
+            <div class="right-nav">
+                <span><a asp-controller="Home" asp-action="Privacy">Privacy</a></span>
+                <span><a asp-controller="Home" asp-action="AboutUs">About us</a></span>
+                <a asp-controller="" asp-action="" class="hover-none">
+                    <img src="@Url.Content("~/images/user-286.png")" alt="User icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>
+            2024 - Sky Search - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </p>
+    </footer>
+</body>
+</html>

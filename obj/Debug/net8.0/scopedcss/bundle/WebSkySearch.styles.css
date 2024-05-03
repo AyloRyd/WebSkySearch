@@ -1,0 +1,20 @@
+/* _content/WebSkySearch/Views/Shared/_Layout.cshtml.rz.scp.css */
+*[b-im1gmygkyb] {
+    margin: 0;
+    padding: 0;
+}
+
+body[b-im1gmygkyb] {
+    background-color: #1d1d1d;
+}
+
+.navbar[b-im1gmygkyb] {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1d1d;
+}
+
+header a[b-im1gmygkyb] {
+    text-decoration: none;
+    color: white;
+}

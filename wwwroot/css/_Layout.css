@@ -1,0 +1,85 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #1d1d1d;
+    font-size: 16px;
+    color: white;
+}
+
+header {
+    font-family: "Berlin Sans FB";
+    box-shadow: 0 0.3em 1em -1px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #008170;
+}
+
+.hover-none:hover {
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    font-size: 1.7em;
+    padding: 0.5em 1em 0.5em 1em;
+    max-height: 2em;
+    justify-content: space-between;
+    background-color: #252525;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar span {
+    margin-left: 0.5em;
+}
+
+.navbar img {
+    height: 2.5em;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav img {
+    margin-left: 0.5em;
+}
+
+.right-nav span {
+    font-family: Corbel;
+    margin-right: 0.5em;
+}
+
+main {
+    flex-grow: 1;
+    padding: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1.2em;
+    margin-top: 7em;
+    font-family: Corbel;
+    font-weight: 700;
+    font-size: 1.1em;
+    background-color: #252525;
+    box-shadow: 0 -0.6em 1em -1px rgba(0, 0, 0, 0.1);
+}

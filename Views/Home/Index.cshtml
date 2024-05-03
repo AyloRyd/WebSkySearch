@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="index-container">
+    <form method="post" class="main-search-form" action="/Home/Results">
+        <div class="form-group">
+            <label for="originCity">City of Origin:</label>
+            <input type="text" placeholder="Enter a city name" id="originCity" name="originCity" required />
+        </div>
+        <div class="form-group">
+            <label for="destinationCity">Destination City:</label>
+            <input type="text" placeholder="Enter a city name" id="destinationCity" name="destinationCity" required />
+        </div>
+        <div class="form-group">
+            <label for="flightDate">Date of Flight:</label>
+            <input type="date" id="flightDate" name="flightDate" required />
+        </div>
+        <button type="submit" class="submit-button">Search</button>
+    </form>
+</div>
