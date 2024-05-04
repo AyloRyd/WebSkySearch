@@ -1,17 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\",
+  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0425\u041D\u0423\u0420\u0415\\Course Project\\WebSkySearch\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|c:\\users\\andre\\source\\repos\\webskysearch\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|c:\\users\\andre\\source\\repos\\webskysearch\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|c:\\users\\andre\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0445\u043D\u0443\u0440\u0435\\course project\\webskysearch\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|c:\\users\\andre\\source\\repos\\webskysearch\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|c:\\users\\andre\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0445\u043D\u0443\u0440\u0435\\course project\\webskysearch\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6CA16DAC-FD55-4FB1-8B17-C0978C8A600C}|WebSkySearch.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -36,24 +35,23 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0425\u041D\u0423\u0420\u0415\\Course Project\\WebSkySearch\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0425\u041D\u0423\u0420\u0415\\Course Project\\WebSkySearch\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-02T23:16:50.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-02T23:16:50.597Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0425\u041D\u0423\u0420\u0415\\Course Project\\WebSkySearch\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0425\u041D\u0423\u0420\u0415\\Course Project\\WebSkySearch\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-02T23:13:56.506Z",
               "EditorCaption": ""
@@ -63,13 +61,11 @@
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml.css",
               "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml.css",
               "ToolTip": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAHAAAA",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\source\\repos\\WebSkySearch\\Views\\Shared\\_Layout.cshtml.css",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-03T07:01:44.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T07:01:44.388Z"
             }
           ]
         }

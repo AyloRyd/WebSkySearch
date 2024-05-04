@@ -20,6 +20,7 @@ header {
 a {
     text-decoration: none;
     color: white;
+    transition: color 0.2s ease;
 }
 
 a:hover {
