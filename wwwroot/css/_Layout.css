@@ -13,7 +13,7 @@ html, body {
 }
 
 header {
-    font-family: "Berlin Sans FB";
+    font-family: "Berlin Sans FB", serif;
     box-shadow: 0 0.3em 1em -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,7 +63,7 @@ a:hover {
 }
 
 .right-nav span {
-    font-family: Corbel;
+    font-family: Corbel, serif;
     margin-right: 0.5em;
 }
 
@@ -77,7 +77,7 @@ footer {
     justify-content: center;
     padding: 1.2em;
     margin-top: 7em;
-    font-family: Corbel;
+    font-family: Corbel, serif;
     font-weight: 700;
     font-size: 1.1em;
     background-color: #252525;

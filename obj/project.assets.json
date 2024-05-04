@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\WebSkySearch.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\WebSkySearch.csproj",
       "projectName": "WebSkySearch",
-      "projectPath": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\WebSkySearch.csproj",
+      "projectPath": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\WebSkySearch.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\source\\repos\\WebSkySearch\\obj\\",
+      "outputPath": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

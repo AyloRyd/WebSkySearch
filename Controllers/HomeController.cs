@@ -48,12 +48,7 @@ namespace WebSkySearch.Controllers
                 var destinationAirport = destination.First();
 
                 var flights = await _searchService.GetFlightsByAirports(originAirport, destinationAirport, flightDate, stops);
-
-                if (flights == null || flights.Count == 0)
-                {
-                    return View("Not found.");
-                }
-
+                
                 return View(new SearchResult
                 {
                     Flights = flights,
