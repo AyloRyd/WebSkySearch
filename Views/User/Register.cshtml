@@ -1,25 +1,31 @@
 ﻿@{
-    Layout = null;
-    var errorMessage = ViewBag.ErrorMessage;
+Layout = null;
+var errorMessage = ViewBag.ErrorMessage;
 }
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sing up</title>
-    <link rel="icon" href="~/images/Flight-PNG-Image-HD.png" type="image/x-icon">
+    <title>Sign up</title>
+    <link rel="icon" href="~/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="~/css/Login.css">
 </head>
 <body>
-<h1>Sing up</h1>
+<div class="top-container">
+    <img src="~/images/user-icon-2.png" alt="User icon" class="user-icon">
+    <h1>Sign up</h1>
+</div>
+
 <form method="post" asp-controller="User" asp-action="Register">
-    <input type="text" name="username" placeholder="Username" required/>
-    <input type="password" name="password" placeholder="Password" required/>
-    <button type="submit">Register</button>
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+    <button type="submit">Sign up</button>
     @if (!string.IsNullOrEmpty(errorMessage))
     {
-        <div class="error-message">@errorMessage</div>
+    <div class="error-message">@errorMessage</div>
     }
 </form>
+
 </body>
 </html>

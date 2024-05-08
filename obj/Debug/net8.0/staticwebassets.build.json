@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jDROBcaRcpr3pREPthu902R3vOLjpQqzKKK7pPuPjFs=",
+  "Hash": "JuK93YbuyIN8BnJd4CfwWH/uiixwQp6wiW2hzT/AUhI=",
   "Source": "WebSkySearch",
   "BasePath": "_content/WebSkySearch",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\css\\Results.css"
     },
     {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\SavedFlights.css",
+      "SourceId": "WebSkySearch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
+      "BasePath": "_content/WebSkySearch",
+      "RelativePath": "css/SavedFlights.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\SavedFlights.css"
+    },
+    {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\SaveFlight.css",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
@@ -131,12 +150,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\3770562.png",
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\attention-icon.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
       "BasePath": "_content/WebSkySearch",
-      "RelativePath": "images/3770562.png",
+      "RelativePath": "images/attention-icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,15 +166,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\3770562.png"
+      "OriginalItemSpec": "wwwroot\\images\\attention-icon.png"
     },
     {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\5839078.png",
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\logo.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
       "BasePath": "_content/WebSkySearch",
-      "RelativePath": "images/5839078.png",
+      "RelativePath": "images/logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,15 +185,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\5839078.png"
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\Flight-PNG-Image-HD.png",
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\search-icon.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
       "BasePath": "_content/WebSkySearch",
-      "RelativePath": "images/Flight-PNG-Image-HD.png",
+      "RelativePath": "images/search-icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,15 +204,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Flight-PNG-Image-HD.png"
+      "OriginalItemSpec": "wwwroot\\images\\search-icon.png"
     },
     {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-128-512.png",
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\success-icon.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
       "BasePath": "_content/WebSkySearch",
-      "RelativePath": "images/user-128-512.png",
+      "RelativePath": "images/success-icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -204,15 +223,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\user-128-512.png"
+      "OriginalItemSpec": "wwwroot\\images\\success-icon.png"
     },
     {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-286.png",
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-icon-2.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
       "BasePath": "_content/WebSkySearch",
-      "RelativePath": "images/user-286.png",
+      "RelativePath": "images/user-icon-2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,7 +242,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\user-286.png"
+      "OriginalItemSpec": "wwwroot\\images\\user-icon-2.png"
+    },
+    {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-icon.png",
+      "SourceId": "WebSkySearch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
+      "BasePath": "_content/WebSkySearch",
+      "RelativePath": "images/user-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\user-icon.png"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\js\\site.js",

@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\SaveFlight.css"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\SavedFlights.css",
+      "PackagePath": "staticwebassets\\css\\SavedFlights.css"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\_Layout.css",
       "PackagePath": "staticwebassets\\css\\_Layout.css"
     },
@@ -25,24 +29,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\3770562.png",
-      "PackagePath": "staticwebassets\\images\\3770562.png"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\attention-icon.png",
+      "PackagePath": "staticwebassets\\images\\attention-icon.png"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\5839078.png",
-      "PackagePath": "staticwebassets\\images\\5839078.png"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\Flight-PNG-Image-HD.png",
-      "PackagePath": "staticwebassets\\images\\Flight-PNG-Image-HD.png"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\search-icon.png",
+      "PackagePath": "staticwebassets\\images\\search-icon.png"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-128-512.png",
-      "PackagePath": "staticwebassets\\images\\user-128-512.png"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\success-icon.png",
+      "PackagePath": "staticwebassets\\images\\success-icon.png"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-286.png",
-      "PackagePath": "staticwebassets\\images\\user-286.png"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-icon-2.png",
+      "PackagePath": "staticwebassets\\images\\user-icon-2.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-icon.png",
+      "PackagePath": "staticwebassets\\images\\user-icon.png"
     },
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\js\\site.js",

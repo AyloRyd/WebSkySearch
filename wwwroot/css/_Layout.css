@@ -98,7 +98,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 1.2em;
-    margin-top: 7em;
+    margin-top: 10em;
     font-family: Corbel, serif;
     font-weight: 700;
     font-size: 1.1em;
@@ -139,6 +139,11 @@ footer a:hover {
 }
 
 .logout {
+    margin-left: 1em;
+}
+
+.user-menu .username {
+    font-family: "Berlin Sans FB", serif;
     margin-left: 1em;
 }
 

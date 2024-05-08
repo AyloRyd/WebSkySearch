@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Text.Json;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,14 +8,16 @@
     <link rel="stylesheet" href="~/css/_Layout.css" />
     <link rel="stylesheet" href="~/css/Index.css" />
     <link rel="stylesheet" href="~/css/Results.css" />
-    <link rel="icon" href="~/images/Flight-PNG-Image-HD.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/SaveFlight.css">
+    <link rel="stylesheet" href="~/css/SavedFlights.css">
+    <link rel="icon" href="~/images/logo.png" type="image/x-icon">
     <title>Sky Search</title>
 </head>
 <body>
 <header>
     <nav class="navbar">
         <a asp-controller="Home" asp-action="Index" class="hover-none">
-            <img src="@Url.Content("~/images/Flight-PNG-Image-HD.png")" alt="Site icon">
+            <img src="@Url.Content("~/images/logo.png")" alt="Site icon">
             <span>Sky Search</span>
         </a>
         <div class="right-nav">
@@ -22,12 +26,18 @@
                 {
                 <a asp-controller="User" asp-action="SavedFlights">Saved Flights</a>
                 <a asp-controller="User" asp-action="Logout" class="logout">Logout</a>
+                
+                var userJson = Context.Session.GetString("User");
+                var user = JsonSerializer.Deserialize<User>(userJson);
+                <span class="username">
+                    <a asp-controller="Home" asp-action="Index" class="hover-none">@user?.Username</a>
+                </span>
                 @* <a asp-controller="User" asp-action="Delete">Delete account</a> *@
                 }
                 else
                 {
-                <a asp-controller="User" asp-action="Login">Sing in</a>
-                <a asp-controller="User" asp-action="Register" class="sing-up">Sing up</a>
+                <a asp-controller="User" asp-action="Login">Sign in</a>
+                <a asp-controller="User" asp-action="Register" class="sing-up">Sign up</a>
                 }
             </div>
         </div>

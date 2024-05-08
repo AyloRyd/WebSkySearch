@@ -11,8 +11,9 @@
         @foreach (var flight in Model.Flights)
         {
             var timeSpan = TimeSpan.FromMinutes(flight.DurationinMinutes);
-
-            <div class="flight-card">
+            var minutes = timeSpan.Minutes > 9 ? timeSpan.Minutes.ToString() : "0" + timeSpan.Minutes.ToString();
+            
+                                                    <div class="flight-card">
                 <div class="first-row">
                     <div class="carriers-container">
                         <div class="carriers">@string.Join(", ", flight.Carriers)</div>
@@ -56,7 +57,7 @@
                     <div class="transfers-and-duration">
                         <p class="transfers">@flight.StopCount transfers</p>
 
-                        <p class="duration">@timeSpan.Hours:@timeSpan.Minutes Hours.</p>
+                        <p class="duration">@timeSpan.Hours:@minutes Hours.</p>
                     </div>
                     <div class="price-and-booking-button">
                         <p class="price">$@flight.Price</p>

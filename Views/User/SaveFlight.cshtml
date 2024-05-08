@@ -1,38 +1,21 @@
 ﻿@{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
+<div class="results-container">
+    <h2>@ViewBag.Message</h2>
 
-<html>
+    <p class="not-found"><a asp-controller="" asp-action="">Return to search page</a></p>
 
-<head>
-    <link rel="icon" href="~/images/Flight-PNG-Image-HD.png" type="image/x-icon">
-    <link rel="stylesheet" href="~/css/SaveFlight.css" />
-    <title>Flight saved</title>
-</head>
-
-<body>
-<div class="save-flight-container">
-    <p class="top-text">
-        @ViewBag.Message
-    </p>
-    
-    @if (ViewBag.Message == "The flight was successfully saved!")
-    {
-        <img class="success-img" src="~/images/5839078.png" alt="">
-    }
-    else
-    {
-        <img class="oops-img" src="~/images/3770562.png" alt="">
-    }
-
-    <button class="go-to-saved-flights"><a asp-controller="User" asp-action="SavedFlights">Go to saved flights</a></button>
-
-    <p class="bottom-text">
-        Or go to <a asp-controller="Home" asp-action="Index">Home page</a>
-    </p>
+    <a asp-controller="User" asp-action="SavedFlights" class="go-to-search-link">
+        @if (ViewBag.Message == "The flight was successfully saved!")
+        {
+            <img class="success-img" src="~/images/success-icon.png" alt="">
+        }
+        else
+        {
+            <img class="attention-img" src="~/images/attention-icon.png" alt="">
+        }
+        <button class="go-to-search">Go to saved flights</button>
+    </a>
 </div>
-</body>
-
-</html>

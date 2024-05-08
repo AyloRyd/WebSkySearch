@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using WebSkySearch.Models;
-using System.Linq;
 
 namespace WebSkySearch.Controllers;
 
@@ -29,12 +29,30 @@ public class UserController : Controller
     }
 
     [HttpPost]
-    public IActionResult Register(string username, string password)
+    public IActionResult Register(string username, string password, string confirmPassword)
     {
         var users = LoadUsers();
         if (users.Any(u => u.Username == username))
         {
             ViewBag.ErrorMessage = "Username already exists.";
+            return View();
+        }
+
+        if (password != confirmPassword)
+        {
+            ViewBag.ErrorMessage = "The password and confirmation password do not match.";
+            return View();
+        }
+
+        if (password.Length < 7)
+        {
+            ViewBag.ErrorMessage = "Password must be at least 7 characters long.";
+            return View();
+        }
+
+        if (!Regex.IsMatch(password, @"^(?=.*[a-zA-Z])(?=.*\d).+$"))
+        {
+            ViewBag.ErrorMessage = "Password must contain both letters and numbers.";
             return View();
         }
 
@@ -49,20 +67,6 @@ public class UserController : Controller
     {
         HttpContext.Session.Remove("User");
         return RedirectToAction("Index", "Home");
-    }
-
-    [HttpPost]
-    public IActionResult Delete(string username)
-    {
-        var users = LoadUsers();
-        var user = users.FirstOrDefault(u => u.Username == username);
-        if (user != null)
-        {
-            users.Remove(user);
-            SaveUsers(users);
-        }
-        HttpContext.Session.Remove("User");
-        return RedirectToAction("Login");
     }
 
     private static List<User> LoadUsers()

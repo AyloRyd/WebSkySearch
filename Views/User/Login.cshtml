@@ -4,14 +4,18 @@
 }
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Sing in</title>
-    <link rel="icon" href="~/images/Flight-PNG-Image-HD.png" type="image/x-icon">
+    <link rel="icon" href="~/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="~/css/Login.css">
 </head>
 <body>
-<h1>Sing in</h1>
+<div class="top-container">
+    <img src="~/images/user-icon.png" alt="User icon" class="user-icon">
+    <h1>Sign in</h1>
+</div>
+
 <form method="post" asp-controller="User" asp-action="Login">
     <input type="text" name="username" placeholder="Username" required/>
     <input type="password" name="password" placeholder="Password" required/>
