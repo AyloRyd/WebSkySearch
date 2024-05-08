@@ -7,7 +7,7 @@ main {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1d1d1d;
     font-size: 18px;
-    color: #fff;
+    color: white;
     display: flex;
     justify-content: center;
 }
@@ -17,9 +17,9 @@ main {
 }
 
 .main-search-form {
-    background: #232D3F;
+    background: var(--dark-blue);
     border-radius: 1.35em;
-    box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.3em 1em var(--shadow-color);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75em;
@@ -41,9 +41,9 @@ label {
     left: 1.25em;
     font-size: 0.85em;
     border-radius: 7px;
-    background: #232D3F;
+    background: var(--dark-blue);
     padding: 0 0.35em;
-    color: #17a2b8;
+    color: var(--light-blue);
 }
 
 input[type="text"],
@@ -65,15 +65,15 @@ input[type="date"] {
     padding: 1.25em;
     border: none;
     border-radius: 1.25em;
-    background: #4e565f;
-    color: #fff;
+    background: var(--input-gray);
+    color: white;
 }
 
 select {
     padding: 0.75em;
     border: none;
     border-radius: 0.75em;
-    background: #4e565f;
+    background: var(--input-gray);
     color: white;
     height: 38px;
     display: flex;
@@ -83,7 +83,7 @@ select {
 .submit-button {
     grid-column: span 3;
     padding: 0.75em;
-    background-color: #005B41;
+    background-color: var(--dark-green);
     border: none;
     border-radius: 0.75em;
     color: white;
@@ -94,5 +94,12 @@ select {
 }
 
 button:hover {
-    background-color: #008170;
+    background-color: var(--light-green);
 }
+
+/*.recent-searches-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin-top: 2em;*/
+/*}*/

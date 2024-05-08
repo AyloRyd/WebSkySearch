@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\Results.css",
       "PackagePath": "staticwebassets\\css\\Results.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\SaveFlight.css",
+      "PackagePath": "staticwebassets\\css\\SaveFlight.css"
     },
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\_Layout.css",
@@ -17,12 +25,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\3f4pf9l8.bmp",
-      "PackagePath": "staticwebassets\\images\\3f4pf9l8.bmp"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\3770562.png",
+      "PackagePath": "staticwebassets\\images\\3770562.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\5839078.png",
+      "PackagePath": "staticwebassets\\images\\5839078.png"
     },
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\Flight-PNG-Image-HD.png",
       "PackagePath": "staticwebassets\\images\\Flight-PNG-Image-HD.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-128-512.png",
+      "PackagePath": "staticwebassets\\images\\user-128-512.png"
     },
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-286.png",

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+    var errorMessage = ViewBag.ErrorMessage;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing up</title>
+    <link rel="icon" href="~/images/Flight-PNG-Image-HD.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+<h1>Sing up</h1>
+<form method="post" asp-controller="User" asp-action="Register">
+    <input type="text" name="username" placeholder="Username" required/>
+    <input type="password" name="password" placeholder="Password" required/>
+    <button type="submit">Register</button>
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="error-message">@errorMessage</div>
+    }
+</form>
+</body>
+</html>

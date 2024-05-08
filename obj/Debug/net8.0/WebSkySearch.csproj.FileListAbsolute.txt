@@ -55,3 +55,4 @@ C:\Users\andre\OneDrive\Документы\ХНУРЕ\Course Project\WebSkySearc
 C:\Users\andre\OneDrive\Документы\ХНУРЕ\Course Project\WebSkySearch\obj\Debug\net8.0\WebSkySearch.pdb
 C:\Users\andre\OneDrive\Документы\ХНУРЕ\Course Project\WebSkySearch\obj\Debug\net8.0\WebSkySearch.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Документы\ХНУРЕ\Course Project\WebSkySearch\obj\Debug\net8.0\ref\WebSkySearch.dll
+C:\Users\andre\OneDrive\Документы\ХНУРЕ\Course Project\WebSkySearch\bin\Debug\net8.0\Data\users.json

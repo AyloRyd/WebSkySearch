@@ -1,0 +1,78 @@
+﻿:root {
+    --bd-color-first: #1d1d1d;
+    --dark-green: #005B41;
+    --light-green: #008170;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: white;
+    font-family: Corbel, serif;
+    font-size: 24px;
+    background-color: var(--bd-color-first);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-text {
+    font-size: 1.7em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.save-flight-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.success-img {
+    height: 16em;
+    margin-left: 1.3em;
+    margin-bottom: 1.5em;
+}
+
+.oops-img {
+    height: 16em;
+    filter: invert(90%);
+    margin-bottom: 1.5em;
+}
+
+.go-to-saved-flights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+    padding-inline: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    background-color: var(--dark-green);
+    text-decoration: none;
+    color: white;
+    border-radius: 3.125em;
+    border: none;
+    transition: background-color 0.2s ease, padding-inline 0.2s ease;
+}
+
+.go-to-saved-flights:hover {
+    background-color: var(--light-green);
+    padding-inline: 2.25em;
+}
+
+p a {
+    transition: color 0.2s ease;
+}
+
+p a:hover {
+    color: var(--light-green);
+}

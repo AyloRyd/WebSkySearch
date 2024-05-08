@@ -11,24 +11,53 @@
     display: grid;
     grid-template-columns: 4fr 1fr 12fr;
     grid-template-rows: auto;
-    row-gap: 0.625em;
+    row-gap: 0.65em;
     column-gap: 1.25em;
-    background: #232D3F;
+    background: var(--dark-blue);
     border-radius: 1.25em;
     padding: 1.25em;
     padding-inline: 1.875em;
     margin-top: 1.5em;
-    box-shadow: 0 0.3125em 0.9375em rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.3em 1em var(--shadow-color);
     transform-origin: center;
 }
 
-.carriers {
+.first-row {
     grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carriers-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.carriers {
     width: fit-content;
-    background-color: #005B41;
-    padding: 0.4375em;
-    padding-inline: 0.8125em;
+    background-color: var(--dark-green);
+    padding: 0.45em;
+    padding-inline: 0.8em;
     border-radius: 1.125em;
+}
+
+.save-flight-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85em;
+    padding-inline: 1.5em;
+    background-color: #979733;
+    text-decoration: none;
+    color: white;
+    border-radius: 3.125em;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.save-flight-button:hover {
+    background-color: #6f6f2b;
 }
 
 .time {
@@ -41,7 +70,7 @@
 }
 
 .time-day {
-    margin-left: 0.4375em;
+    margin-left: 0.45em;
     font-size: 0.65em;
     font-weight: 400;
 }
@@ -67,11 +96,11 @@
     width: 0.625em;
     height: 0.625em;
     border-radius: 50%;
-    border: 0.125em solid #fff;
+    border: 0.125em solid white;
 }
 
 .circle-bottom {
-    background-color: #fff;
+    background-color: white;
 }
 
 .circle-top {
@@ -81,7 +110,7 @@
 .line {
     width: 0.125em;
     height: 3.125em;
-    background-color: #fff;
+    background-color: white;
 }
 
 .bottom-border {
@@ -107,7 +136,7 @@
 
 .transfers {
     width: fit-content;
-    background-color: #555555;
+    background-color: var(--input-gray);
     padding: 0.4375em;
     padding-inline: 0.8125em;
     border-radius: 1.125em;
@@ -139,7 +168,7 @@
     padding: 0.85em;
     padding-inline: 1.5em;
     font-size: 1.375em;
-    background-color: #005B41;
+    background-color: var(--dark-green);
     text-decoration: none;
     color: white;
     border-radius: 3.125em;
@@ -148,6 +177,6 @@
 }
 
 .booking-url:hover {
-    background-color: #008170;
+    background-color: var(--light-green);
     padding-inline: 2em;
 }

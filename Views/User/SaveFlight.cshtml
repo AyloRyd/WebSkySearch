@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="icon" href="~/images/Flight-PNG-Image-HD.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/SaveFlight.css" />
+    <title>Flight saved</title>
+</head>
+
+<body>
+<div class="save-flight-container">
+    <p class="top-text">
+        @ViewBag.Message
+    </p>
+    
+    @if (ViewBag.Message == "The flight was successfully saved!")
+    {
+        <img class="success-img" src="~/images/5839078.png" alt="">
+    }
+    else
+    {
+        <img class="oops-img" src="~/images/3770562.png" alt="">
+    }
+
+    <button class="go-to-saved-flights"><a asp-controller="User" asp-action="SavedFlights">Go to saved flights</a></button>
+
+    <p class="bottom-text">
+        Or go to <a asp-controller="Home" asp-action="Index">Home page</a>
+    </p>
+</div>
+</body>
+
+</html>

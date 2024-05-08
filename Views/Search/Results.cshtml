@@ -1,5 +1,4 @@
-﻿@using WebSkySearch.Models
-@using System.Text.Json;
+﻿@using System.Text.Json;
 @model SearchResult
 
 <div class="results-container">
@@ -14,10 +13,25 @@
             var timeSpan = TimeSpan.FromMinutes(flight.DurationinMinutes);
 
             <div class="flight-card">
-                <div class="carriers">@string.Join(", ", flight.Carriers)</div>
+                <div class="first-row">
+                    <div class="carriers-container">
+                        <div class="carriers">@string.Join(", ", flight.Carriers)</div>
+                    </div>
+
+                    @if (Context.Session.GetString("User") != null)
+                    {
+                        <div>
+                            <form method="post" asp-controller="User" asp-action="SaveFlight">
+                                <input type="hidden" name="flightData"
+                                       value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))"/>
+                                <button type="submit" class="save-flight-button">Save</button>
+                            </form>
+                        </div>
+                    }
+                </div>
 
                 <p class="time">
-                    @flight.DepartureTime.ToString("HH:mm") 
+                    @flight.DepartureTime.ToString("HH:mm")
                     <span class="time-day">@flight.DepartureTime.ToString("(dd.MM)")</span>
                 </p>
 
@@ -46,9 +60,9 @@
                     </div>
                     <div class="price-and-booking-button">
                         <p class="price">$@flight.Price</p>
-                        <form method="post" action="/Home/RedirectToBooking">
-                            <input type="hidden" name="flightData" 
-                                   value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))" />
+                        <form method="post" asp-controller="Search" asp-action="RedirectToBooking">
+                            <input type="hidden" name="flightData"
+                                   value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))"/>
                             <button type="submit" class="booking-url">Book</button>
                         </form>
                     </div>

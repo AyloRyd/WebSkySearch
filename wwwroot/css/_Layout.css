@@ -1,4 +1,16 @@
-﻿* {
+﻿:root {
+    --bd-color-first: #1d1d1d;
+    --bd-color-second: #252525;
+    --shadow-color: #151515;
+    --dark-blue: #222a39;
+    --light-blue: #21e6ff;
+    --dark-green: #005B41;
+    --light-green: #008170;
+    --link-gray: #a8a8a8;
+    --input-gray: #4e565f;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,24 +19,33 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: #1d1d1d;
+    background-color: var(--bd-color-first);
     font-size: 16px;
     color: white;
 }
 
 header {
     font-family: "Berlin Sans FB", serif;
-    box-shadow: 0 0.3em 1em -1px rgba(0, 0, 0, 0.1);
+    background-color: var(--bd-color-second);
 }
 
 a {
     text-decoration: none;
-    color: white;
-    transition: color 0.2s ease;
+    cursor: pointer;
+    color: var(--link-gray);
+    display: flex;
+    align-items: center;
+    height: 2.5em;
+    position: relative; 
+    transition: border-bottom 0.2s ease, color 0.2s ease;
 }
 
 a:hover {
-    color: #008170;
+    color: white;
+}
+
+.hover-none {
+    color: white;
 }
 
 .hover-none:hover {
@@ -38,7 +59,6 @@ a:hover {
     padding: 0.5em 1em 0.5em 1em;
     max-height: 2em;
     justify-content: space-between;
-    background-color: #252525;
 }
 
 .navbar a {
@@ -59,13 +79,14 @@ a:hover {
     align-items: center;
 }
 
-.right-nav img {
-    margin-left: 0.5em;
-}
-
 .right-nav span {
     font-family: Corbel, serif;
-    margin-right: 0.5em;
+    margin-right: 1em;
+}
+
+.user-icon {
+    filter: invert(60%);
+    transition: filter 0.2s ease;
 }
 
 main {
@@ -81,6 +102,43 @@ footer {
     font-family: Corbel, serif;
     font-weight: 700;
     font-size: 1.1em;
-    background-color: #252525;
-    box-shadow: 0 -0.6em 1em -1px rgba(0, 0, 0, 0.1);
+    background-color: var(--bd-color-second);
 }
+
+footer a {
+    display: inline;
+    color: white;
+    border: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--light-green);
+    border: none;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    font-family: Corbel, serif;
+}
+
+.sing-up {
+    margin-left: 1em;
+    background-color: #0790A3FF;
+    height: 2em;
+    border-radius: 0.5em;
+    padding-inline: 0.3em;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.sing-up:hover {
+    background-color: #09555e;
+}
+
+.logout {
+    margin-left: 1em;
+}
+
