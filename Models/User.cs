@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Text.Json;
 
 namespace WebSkySearch.Models;
 
@@ -11,4 +10,6 @@ public class User
     public string? ConfirmPassword { get; set; }
 
     public List<Flight>? SavedFlights { get; set; }
+    
+    public List<SearchRequest>? SearchHistory { get; set; }
 }

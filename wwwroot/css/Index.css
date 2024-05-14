@@ -97,9 +97,9 @@ button:hover {
     background-color: var(--light-green);
 }
 
-/*.recent-searches-container {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    margin-top: 2em;*/
-/*}*/
+.recent-searches-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}

@@ -32,7 +32,7 @@
                     <form method="post" asp-controller="User" asp-action="RemoveFlight">
                         <input type="hidden" name="flightData"
                                value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))"/>
-                        <button type="submit" class="save-flight-button">Remove</button>
+                        <button type="submit" class="remove-flight-button">Remove</button>
                     </form>
                 </div>
                 }

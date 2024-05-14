@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JuK93YbuyIN8BnJd4CfwWH/uiixwQp6wiW2hzT/AUhI=",
+  "Hash": "SJZiXJV8cCDBf2RdIjrG9hkJTm+Y4YIDNz0bJRNvxRM=",
   "Source": "WebSkySearch",
   "BasePath": "_content/WebSkySearch",
   "Mode": "Default",
@@ -188,6 +188,25 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\ok-icon.png",
+      "SourceId": "WebSkySearch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
+      "BasePath": "_content/WebSkySearch",
+      "RelativePath": "images/ok-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ok-icon.png"
+    },
+    {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\search-icon.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
@@ -205,25 +224,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\search-icon.png"
-    },
-    {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\success-icon.png",
-      "SourceId": "WebSkySearch",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
-      "BasePath": "_content/WebSkySearch",
-      "RelativePath": "images/success-icon.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\success-icon.png"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\user-icon-2.png",

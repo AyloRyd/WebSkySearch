@@ -1,3 +1,5 @@
+using WebSkySearch.Services;
+
 namespace WebSkySearch
 {
     public class Program
@@ -14,6 +16,13 @@ namespace WebSkySearch
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+            
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddScoped<UserService>();
+            var searchServiceConfig = builder.Configuration.GetSection("SearchService");
+            builder.Services.AddScoped(_ => 
+                new SearchService(searchServiceConfig["ApiHost"], searchServiceConfig["ApiKey"]));
 
             var app = builder.Build();
 

@@ -1,4 +1,6 @@
-﻿<div class="index-container">
+﻿@using System.Text.Json;
+
+<div class="index-container">
     <form method="post" asp-controller="Search" asp-action="Results" class="main-search-form" >
         <div class="form-group">
             <label for="originCity">City of Origin:</label>
@@ -14,4 +16,23 @@
         </div>
         <button type="submit" class="submit-button">Search</button>
     </form>
+
+    @if (Context.Session.GetString("User") != null)
+    {
+        var userJson = Context.Session.GetString("User");
+        var user = JsonSerializer.Deserialize<User>(userJson);
+        
+        @if (user.SearchHistory != null)
+        {
+            <section class="recent-searches-container">
+                @foreach (var searchRequest in user.SearchHistory)
+                {
+                    <div class="search-request">
+                        <p>@searchRequest.OriginCity -> @searchRequest.DestinationCity 
+                            on @searchRequest.FlightDate.ToString("HH:mm(dd:MM)")</p>
+                    </div>
+                }
+            </section>
+        }
+    }
 </div>

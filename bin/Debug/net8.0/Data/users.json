@@ -1,0 +1,116 @@
+[
+  {
+    "Username": "AyloRyd",
+    "Password": "nitron228",
+    "ConfirmPassword": null,
+    "SavedFlights": [
+      {
+        "Id": "13298-2405150620--31669-0-11149-2405150805",
+        "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiS1RXIiwiZCI6IkRUTSIsImQxIjoiMjAyNC0wNS0xNSJ9",
+        "OriginAirport": {
+          "Name": "Katowice",
+          "Code": "KTW",
+          "Id": "95673614",
+          "City": "Katowice",
+          "Country": "Poland"
+        },
+        "DestinationAirport": {
+          "Name": "Dortmund",
+          "Code": "DTM",
+          "Id": "95673546",
+          "City": "Dortmund",
+          "Country": "Germany"
+        },
+        "DepartureTime": "2024-05-15T06:20:00",
+        "ArrivalTime": "2024-05-15T08:05:00",
+        "DurationinMinutes": 105,
+        "TimeInDays": 0,
+        "StopCount": 0,
+        "Carriers": [
+          "Wizz Air"
+        ],
+        "Price": 152.51,
+        "Segments": null
+      }
+    ],
+    "SearchHistory": [
+      {
+        "OriginCity": "Katowice",
+        "DestinationCity": "Dortmund",
+        "FlightDate": "2024-05-15T00:00:00"
+      },
+      {
+        "OriginCity": "Katowice",
+        "DestinationCity": "Dortmund",
+        "FlightDate": "2024-05-15T00:00:00"
+      }
+    ]
+  },
+  {
+    "Username": "Andrii",
+    "Password": "nitron228",
+    "ConfirmPassword": null,
+    "SavedFlights": [
+      {
+        "Id": "11149-2405231730--31669-0-13298-2405231905",
+        "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiRFRNIiwiZCI6IktUVyIsImQxIjoiMjAyNC0wNS0yMyJ9",
+        "OriginAirport": {
+          "Name": "Dortmund",
+          "Code": "DTM",
+          "Id": "95673546",
+          "City": "Dortmund",
+          "Country": "Germany"
+        },
+        "DestinationAirport": {
+          "Name": "Katowice",
+          "Code": "KTW",
+          "Id": "95673614",
+          "City": "Katowice",
+          "Country": "Poland"
+        },
+        "DepartureTime": "2024-05-23T17:30:00",
+        "ArrivalTime": "2024-05-23T19:05:00",
+        "DurationinMinutes": 95,
+        "TimeInDays": 0,
+        "StopCount": 0,
+        "Carriers": [
+          "Wizz Air"
+        ],
+        "Price": 131.97,
+        "Segments": null
+      }
+    ],
+    "SearchHistory": [
+      {
+        "OriginCity": "Dortmund",
+        "DestinationCity": "Katowice",
+        "FlightDate": "2024-05-23T00:00:00"
+      },
+      {
+        "OriginCity": "Amsterdam",
+        "DestinationCity": "London",
+        "FlightDate": "2024-05-30T00:00:00"
+      },
+      {
+        "OriginCity": "London",
+        "DestinationCity": "Amsterdam",
+        "FlightDate": "2024-05-31T00:00:00"
+      },
+      {
+        "OriginCity": "Amsterdam",
+        "DestinationCity": "London",
+        "FlightDate": "2024-05-15T00:00:00"
+      },
+      {
+        "OriginCity": "Prague",
+        "DestinationCity": "Paris",
+        "FlightDate": "2024-05-20T00:00:00"
+      },
+      {
+        "OriginCity": "Barselona",
+        "DestinationCity": "Copenhagen",
+        "FlightDate": "2024-05-25T00:00:00"
+      }
+    ]
+  }
+]

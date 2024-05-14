@@ -10,11 +10,11 @@
     <a asp-controller="User" asp-action="SavedFlights" class="go-to-search-link">
         @if (ViewBag.Message == "The flight was successfully saved!")
         {
-            <img class="success-img" src="~/images/success-icon.png" alt="">
+            <img class="result-img" src="~/images/ok-icon.png" alt="" style="height: 12em; margin-top: 5em;">
         }
         else
         {
-            <img class="attention-img" src="~/images/attention-icon.png" alt="">
+            <img class="result-img" src="~/images/attention-icon.png" alt="">
         }
         <button class="go-to-search">Go to saved flights</button>
     </a>

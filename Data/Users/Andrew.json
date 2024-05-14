@@ -1,0 +1,108 @@
+{
+  "Username": "Andrew",
+  "Password": "nitron228",
+  "ConfirmPassword": null,
+  "SavedFlights": [
+    {
+      "Id": "13542-2405192040--30598-0-12712-2405192330",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiTE9ORCIsImQiOiJOWUNBIiwiZDEiOiIyMDI0LTA1LTE5In0=",
+      "OriginAirport": {
+        "Name": "London Gatwick",
+        "Code": "LGW",
+        "Id": "95565051",
+        "City": "London",
+        "Country": "United Kingdom"
+      },
+      "DestinationAirport": {
+        "Name": "New York John F. Kennedy",
+        "Code": "JFK",
+        "Id": "95565058",
+        "City": "New York",
+        "Country": "United States"
+      },
+      "DepartureTime": "2024-05-19T20:40:00",
+      "ArrivalTime": "2024-05-19T23:30:00",
+      "DurationinMinutes": 470,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Norse Atlantic Airways (UK)"
+      ],
+      "Price": 191.99,
+      "Segments": null
+    },
+    {
+      "Id": "9451-2405301100--32680-0-13870-2405301340",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiQU1TIiwiZCI6Ik1BRCIsImQxIjoiMjAyNC0wNS0zMCJ9",
+      "OriginAirport": {
+        "Name": "Amsterdam Schiphol",
+        "Code": "AMS",
+        "Id": "95565044",
+        "City": "Amsterdam",
+        "Country": "Netherlands"
+      },
+      "DestinationAirport": {
+        "Name": "Madrid",
+        "Code": "MAD",
+        "Id": "95565077",
+        "City": "Madrid",
+        "Country": "Spain"
+      },
+      "DepartureTime": "2024-05-30T11:00:00",
+      "ArrivalTime": "2024-05-30T13:40:00",
+      "DurationinMinutes": 160,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Air Europa"
+      ],
+      "Price": 147.24,
+      "Segments": null
+    },
+    {
+      "Id": "13870-2405250915--31915-0-11493-2405251140",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiTUFEIiwiZCI6IlJPTUUiLCJkMSI6IjIwMjQtMDUtMjUifQ==",
+      "OriginAirport": {
+        "Name": "Madrid",
+        "Code": "MAD",
+        "Id": "95565077",
+        "City": "Madrid",
+        "Country": "Spain"
+      },
+      "DestinationAirport": {
+        "Name": "Rome Fiumicino",
+        "Code": "FCO",
+        "Id": "95565065",
+        "City": "Rome",
+        "Country": "Italy"
+      },
+      "DepartureTime": "2024-05-25T09:15:00",
+      "ArrivalTime": "2024-05-25T11:40:00",
+      "DurationinMinutes": 145,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Ryanair"
+      ],
+      "Price": 152.52,
+      "Segments": null
+    }
+  ],
+  "SearchHistory": [
+    {
+      "OriginCity": "Madrid",
+      "DestinationCity": "Rome",
+      "FlightDate": "2024-05-25T00:00:00"
+    },
+    {
+      "OriginCity": "Amsterdam",
+      "DestinationCity": "Madrid",
+      "FlightDate": "2024-05-30T00:00:00"
+    },
+    {
+      "OriginCity": "Amsterdam",
+      "DestinationCity": "Madrid",
+      "FlightDate": "2024-05-15T00:00:00"
+    }
+  ]
+}
