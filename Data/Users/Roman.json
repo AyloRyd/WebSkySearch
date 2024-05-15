@@ -1,0 +1,47 @@
+{
+  "Username": "Roman",
+  "Password": "nitron228",
+  "ConfirmPassword": null,
+  "SavedFlights": [
+    {
+      "Id": "9772-2405261515--31685-0-9451-2405261740",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiQkNOIiwiZCI6IkFNUyIsImQxIjoiMjAyNC0wNS0yNiJ9",
+      "OriginAirport": {
+        "Name": "Barcelona",
+        "Code": "BCN",
+        "Id": "95565085",
+        "City": "Barcelona",
+        "Country": "Spain"
+      },
+      "DestinationAirport": {
+        "Name": "Amsterdam Schiphol",
+        "Code": "AMS",
+        "Id": "95565044",
+        "City": "Amsterdam",
+        "Country": "Netherlands"
+      },
+      "DepartureTime": "2024-05-26T15:15:00",
+      "ArrivalTime": "2024-05-26T17:40:00",
+      "DurationInMinutes": 145,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Vueling Airlines"
+      ],
+      "Price": 154.79,
+      "Segments": null
+    }
+  ],
+  "SearchHistory": [
+    {
+      "OriginCity": "Barselona",
+      "DestinationCity": "Amsterdam",
+      "FlightDate": "2024-05-26T00:00:00"
+    },
+    {
+      "OriginCity": "London",
+      "DestinationCity": "Paris",
+      "FlightDate": "2024-06-01T00:00:00"
+    }
+  ]
+}

@@ -57,14 +57,14 @@ namespace WebSkySearch.Services
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async Task<string?> GetBookingUrl(Flight flight)
+        public async Task<string?> GetBookingUrl(Flight? flight)
         {
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
                 RequestUri = new Uri($"https://{apiHost}/flights/detail?" +
-                                     $"token={flight.Token?.Replace("=", "%3D")}&" +
-                                     $"itineraryId={flight.Id}"),
+                                     $"token={flight?.Token?.Replace("=", "%3D")}&" +
+                                     $"itineraryId={flight?.Id}"),
                 Headers =
                 {
                     { "X-RapidAPI-Key", apiKey },

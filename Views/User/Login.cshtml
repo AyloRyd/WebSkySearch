@@ -19,11 +19,14 @@
 <form method="post" asp-controller="User" asp-action="Login">
     <input type="text" name="username" placeholder="Username" required/>
     <input type="password" name="password" placeholder="Password" required/>
-    <button type="submit">Login</button>
+    <button type="submit">Sign in</button>
     @if (!string.IsNullOrEmpty(errorMessage))
     {
         <div class="error-message">@errorMessage</div>
     }
 </form>
+<p class="bottom-hint">
+    <a asp-controller="User" asp-action="Register">Sign up if you don't have an account</a>
+</p>
 </body>
 </html>

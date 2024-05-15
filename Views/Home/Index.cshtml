@@ -1,37 +1,65 @@
 ﻿@using System.Text.Json;
+@using System.Globalization;
 
 <div class="index-container">
-    <form method="post" asp-controller="Search" asp-action="Results" class="main-search-form" >
+    <form method="post" asp-controller="Search" asp-action="Results" class="main-search-form">
         <div class="form-group">
             <label for="originCity">City of Origin:</label>
-            <input type="text" placeholder="Enter a city name" id="originCity" name="originCity" required/>
+            <input type="text" placeholder="Enter a city name" id="originCity" name="originCity" required />
         </div>
         <div class="form-group">
             <label for="destinationCity">Destination City:</label>
-            <input type="text" placeholder="Enter a city name" id="destinationCity" name="destinationCity" required/>
+            <input type="text" placeholder="Enter a city name" id="destinationCity" name="destinationCity" required />
         </div>
         <div class="form-group">
             <label for="flightDate">Date of Flight:</label>
-            <input type="date" id="flightDate" name="flightDate" required/>
+            <input type="date" id="flightDate" name="flightDate" required />
         </div>
         <button type="submit" class="submit-button">Search</button>
     </form>
 
-    @if (Context.Session.GetString("User") != null)
+    @if (Context.Session.GetString("User") == null)
+    {
+        <section class="recent-searches-not-login">
+            <img src="~/images/history-icon.png" alt="" class="history-img">
+            <a asp-controller="User" asp-action="Login">
+                <p>Sign in to see<br/>the history of your requests</p>
+            </a>
+        </section>
+    }
+    else
     {
         var userJson = Context.Session.GetString("User");
         var user = JsonSerializer.Deserialize<User>(userJson);
-        
-        @if (user.SearchHistory != null)
+
+        @if (user?.SearchHistory is not null)
         {
             <section class="recent-searches-container">
                 @foreach (var searchRequest in user.SearchHistory)
                 {
                     <div class="search-request">
-                        <p>@searchRequest.OriginCity -> @searchRequest.DestinationCity 
-                            on @searchRequest.FlightDate.ToString("HH:mm(dd:MM)")</p>
+                        <form method="post" asp-controller="Search" asp-action="Results" 
+                              asp-route-originCity="@searchRequest.OriginCity" 
+                              asp-route-destinationCity="@searchRequest.DestinationCity" 
+                              asp-route-flightDate="@searchRequest.FlightDate.ToString("yyyy-MM-dd")">
+                            <button type="submit" class="history-link-button">
+                                <img src="~/images/history-icon-2.png" alt="" class="history-icon-2">
+                                <div class="history-info-container">
+                                    <p>@searchRequest.OriginCity &rarr; @searchRequest.DestinationCity</p>
+                                    <p>@searchRequest.FlightDate.ToString("dddd, dd MMMM", 
+                                                                        CultureInfo.CreateSpecificCulture("en-US"))</p>
+                                </div>
+                            </button>
+                        </form>
                     </div>
                 }
+            </section>
+        }
+        else 
+        {
+            <section class="recent-searches-not-login">
+                <img src="~/images/history-icon.png" alt="" class="history-img">
+                <p>You haven't searched for flights yet</p>
             </section>
         }
     }

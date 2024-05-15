@@ -33,6 +33,14 @@
       "PackagePath": "staticwebassets\\images\\attention-icon.png"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\history-icon-2.png",
+      "PackagePath": "staticwebassets\\images\\history-icon-2.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\history-icon.png",
+      "PackagePath": "staticwebassets\\images\\history-icon.png"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },

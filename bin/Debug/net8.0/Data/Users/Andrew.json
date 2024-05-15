@@ -4,77 +4,77 @@
   "ConfirmPassword": null,
   "SavedFlights": [
     {
-      "Id": "13542-2405192040--30598-0-12712-2405192330",
-      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiTE9ORCIsImQiOiJOWUNBIiwiZDEiOiIyMDI0LTA1LTE5In0=",
+      "Id": "13870-2405290705--32680-0-11493-2405290930",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiTUFEIiwiZCI6IlJPTUUiLCJkMSI6IjIwMjQtMDUtMjkifQ==",
       "OriginAirport": {
-        "Name": "London Gatwick",
-        "Code": "LGW",
-        "Id": "95565051",
-        "City": "London",
-        "Country": "United Kingdom"
-      },
-      "DestinationAirport": {
-        "Name": "New York John F. Kennedy",
-        "Code": "JFK",
-        "Id": "95565058",
-        "City": "New York",
-        "Country": "United States"
-      },
-      "DepartureTime": "2024-05-19T20:40:00",
-      "ArrivalTime": "2024-05-19T23:30:00",
-      "DurationinMinutes": 470,
-      "TimeInDays": 0,
-      "StopCount": 0,
-      "Carriers": [
-        "Norse Atlantic Airways (UK)"
-      ],
-      "Price": 191.99,
-      "Segments": null
-    },
-    {
-      "Id": "9451-2405301100--32680-0-13870-2405301340",
-      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiQU1TIiwiZCI6Ik1BRCIsImQxIjoiMjAyNC0wNS0zMCJ9",
-      "OriginAirport": {
-        "Name": "Amsterdam Schiphol",
-        "Code": "AMS",
-        "Id": "95565044",
-        "City": "Amsterdam",
-        "Country": "Netherlands"
-      },
-      "DestinationAirport": {
         "Name": "Madrid",
         "Code": "MAD",
         "Id": "95565077",
         "City": "Madrid",
         "Country": "Spain"
       },
-      "DepartureTime": "2024-05-30T11:00:00",
-      "ArrivalTime": "2024-05-30T13:40:00",
-      "DurationinMinutes": 160,
+      "DestinationAirport": {
+        "Name": "Rome Fiumicino",
+        "Code": "FCO",
+        "Id": "95565065",
+        "City": "Rome",
+        "Country": "Italy"
+      },
+      "DepartureTime": "2024-05-29T07:05:00",
+      "ArrivalTime": "2024-05-29T09:30:00",
+      "DurationInMinutes": 145,
       "TimeInDays": 0,
       "StopCount": 0,
       "Carriers": [
         "Air Europa"
       ],
-      "Price": 147.24,
+      "Price": 171.79,
+      "Segments": null
+    },
+    {
+      "Id": "17648-2405182110--32317-0-12126-2405182350",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiV0FSUyIsImQiOiJIRUwiLCJkMSI6IjIwMjQtMDUtMTgifQ==",
+      "OriginAirport": {
+        "Name": "Warsaw Chopin",
+        "Code": "WAW",
+        "Id": "95673438",
+        "City": "Warsaw",
+        "Country": "Poland"
+      },
+      "DestinationAirport": {
+        "Name": "Helsinki Vantaa",
+        "Code": "HEL",
+        "Id": "95673700",
+        "City": "Helsinki",
+        "Country": "Finland"
+      },
+      "DepartureTime": "2024-05-18T21:10:00",
+      "ArrivalTime": "2024-05-18T23:50:00",
+      "DurationInMinutes": 100,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Finnair"
+      ],
+      "Price": 121.61,
       "Segments": null
     }
   ],
   "SearchHistory": [
     {
-      "OriginCity": "Amsterdam",
-      "DestinationCity": "Madrid",
-      "FlightDate": "2024-05-30T00:00:00"
+      "OriginCity": "Warsaw",
+      "DestinationCity": "Helsinki",
+      "FlightDate": "2024-05-18T00:00:00"
     },
     {
-      "OriginCity": "Amsterdam",
-      "DestinationCity": "Madrid",
-      "FlightDate": "2024-05-15T00:00:00"
+      "OriginCity": "Madrid",
+      "DestinationCity": "Rome",
+      "FlightDate": "2024-05-29T00:00:00"
     },
     {
-      "OriginCity": "London",
-      "DestinationCity": "New York",
-      "FlightDate": "2024-05-19T00:00:00"
+      "OriginCity": "Dortmund",
+      "DestinationCity": "Katowice",
+      "FlightDate": "2024-05-29T00:00:00"
     }
   ]
 }

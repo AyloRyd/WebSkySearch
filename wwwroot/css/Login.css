@@ -5,6 +5,7 @@
     --dark-green: #005B41;
     --light-green: #008170;
     --input-gray: #4e565f;
+    --link-gray: #a8a8a8;
 }
 
 * {
@@ -83,4 +84,17 @@ button:hover {
     color: red;
     font-size: 0.7em;
     padding-top: 1.5em;
+}
+
+.bottom-hint {
+    margin-top: 1.5em;
+}
+
+.bottom-hint a {
+    text-decoration: none;
+    color: var(--link-gray);
+}
+
+.bottom-hint a:hover {
+    color: white;
 }

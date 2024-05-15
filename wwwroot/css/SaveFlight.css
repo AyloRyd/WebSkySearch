@@ -9,10 +9,16 @@
     align-items: center;
 }
 
-.not-found a {
+.return-to-search {
+    cursor: pointer;
     color: white;
+    background-color: var(--bd-color-first);
+    border: none;
+    font-size: 24px;
+    transition: color 0.2s ease;
 }
 
-.not-found a:hover {
+.return-to-search:hover {
+    background-color: var(--bd-color-first);
     color: var(--light-green);
 }

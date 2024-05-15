@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Runtime.InteropServices.JavaScript;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using WebSkySearch.Models;
@@ -16,7 +17,7 @@ public class UserController(UserService userService) : Controller
         public IActionResult Login(string username, string password)
         {
             var user = userService.LoadUser(username);
-            if (user.Password != password)
+            if (user?.Password != password)
             {
                 ViewBag.ErrorMessage = "Invalid username or password.";
                 return View();
@@ -74,8 +75,13 @@ public class UserController(UserService userService) : Controller
                 return Unauthorized();
             
             var user = JsonSerializer.Deserialize<User>(userJson);
+            if (user?.SavedFlights is null)
+            {
+                return NotFound();
+            }
+            
             ViewBag.Message = "The flight has already been saved!";
-            if (!user.SavedFlights.Any(f => f.Id == flight?.Id))
+            if (user.SavedFlights.All(f => f.Id != flight?.Id) && flight is not null)
             {
                 user.SavedFlights.Add(flight); 
                 ViewBag.Message = "The flight was successfully saved!";

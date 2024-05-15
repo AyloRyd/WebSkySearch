@@ -1,0 +1,80 @@
+{
+  "Username": "Arocus",
+  "Password": "nitron228",
+  "ConfirmPassword": null,
+  "SavedFlights": [
+    {
+      "Id": "15093-2406010905--32013-0-9772-2406011225",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiT1NMTyIsImQiOiJCQ04iLCJkMSI6IjIwMjQtMDYtMDEifQ==",
+      "OriginAirport": {
+        "Name": "Oslo Gardermoen",
+        "Code": "OSL",
+        "Id": "128667763",
+        "City": "Oslo",
+        "Country": "Norway"
+      },
+      "DestinationAirport": {
+        "Name": "Barcelona",
+        "Code": "BCN",
+        "Id": "95565085",
+        "City": "Barcelona",
+        "Country": "Spain"
+      },
+      "DepartureTime": "2024-06-01T09:05:00",
+      "ArrivalTime": "2024-06-01T12:25:00",
+      "DurationInMinutes": 200,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Norwegian"
+      ],
+      "Price": 120.16,
+      "Segments": null
+    },
+    {
+      "Id": "13298-2405260620--31669-0-11149-2405260805",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiS1RXIiwiZCI6IkRUTSIsImQxIjoiMjAyNC0wNS0yNiJ9",
+      "OriginAirport": {
+        "Name": "Katowice",
+        "Code": "KTW",
+        "Id": "95673614",
+        "City": "Katowice",
+        "Country": "Poland"
+      },
+      "DestinationAirport": {
+        "Name": "Dortmund",
+        "Code": "DTM",
+        "Id": "95673546",
+        "City": "Dortmund",
+        "Country": "Germany"
+      },
+      "DepartureTime": "2024-05-26T06:20:00",
+      "ArrivalTime": "2024-05-26T08:05:00",
+      "DurationInMinutes": 105,
+      "TimeInDays": 0,
+      "StopCount": 0,
+      "Carriers": [
+        "Wizz Air"
+      ],
+      "Price": 49.79,
+      "Segments": null
+    }
+  ],
+  "SearchHistory": [
+    {
+      "OriginCity": "Katowice",
+      "DestinationCity": "Dortmund",
+      "FlightDate": "2024-05-26T00:00:00"
+    },
+    {
+      "OriginCity": "London",
+      "DestinationCity": "Toronto",
+      "FlightDate": "2024-05-25T00:00:00"
+    },
+    {
+      "OriginCity": "Oslo",
+      "DestinationCity": "Barselona",
+      "FlightDate": "2024-06-01T00:00:00"
+    }
+  ]
+}

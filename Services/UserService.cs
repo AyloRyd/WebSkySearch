@@ -8,7 +8,7 @@ public class UserService(IHostEnvironment env, IHttpContextAccessor httpContextA
 
     private string GetUserFilePath(string username) => Path.Combine(_usersDirectory, $"{username}.json");
 
-        public void SaveUser(User user)
+        public void SaveUser(User? user)
         {
             var filePath = GetUserFilePath(user.Username);
 
@@ -44,36 +44,44 @@ public class UserService(IHostEnvironment env, IHttpContextAccessor httpContextA
         {
             var userJson = httpContextAccessor?.HttpContext?.Session.GetString("User");
             var user = JsonSerializer.Deserialize<User>(userJson);
-            if (user != null)
+            if (user == null) return;
+            user.SearchHistory ??= [];
+
+            var newSearchRequest = new SearchRequest
             {
-                user.SearchHistory ??= new List<SearchRequest>();
+                OriginCity = originCity,
+                DestinationCity = destinationCity,
+                FlightDate = flightDate
+            };
 
-                var newSearchRequest = new SearchRequest
+            var existingRequest = user.SearchHistory.FirstOrDefault(sr =>
+                sr.OriginCity == newSearchRequest.OriginCity &&
+                sr.DestinationCity == newSearchRequest.DestinationCity &&
+                sr.FlightDate.Date == newSearchRequest.FlightDate.Date);
+
+            if (existingRequest != null)
+            {
+                if (user.SearchHistory.IndexOf(existingRequest) == 0)
                 {
-                    OriginCity = originCity,
-                    DestinationCity = destinationCity,
-                    FlightDate = flightDate
-                };
-
-                var requestExists = user.SearchHistory.Any(sr =>
-                    sr.OriginCity == newSearchRequest.OriginCity &&
-                    sr.DestinationCity == newSearchRequest.DestinationCity &&
-                    sr.FlightDate.Date == newSearchRequest.FlightDate.Date);
-
-                if (!requestExists)
-                {
-                    user.SearchHistory.Insert(0, newSearchRequest);
-
-                    if (user.SearchHistory.Count > 3)
-                    {
-                        user.SearchHistory.RemoveAt(user.SearchHistory.Count - 1);
-                    }
-
-                    var updatedUserJson = JsonSerializer.Serialize(user);
-                    httpContextAccessor?.HttpContext?.Session.SetString("User", updatedUserJson);
-
-                    SaveUser(user);
+                    return;
                 }
+                user.SearchHistory.Remove(existingRequest);
+                user.SearchHistory.Insert(0, existingRequest);
             }
+            else
+            {
+                user.SearchHistory.Insert(0, newSearchRequest);
+            }
+
+            if (user.SearchHistory.Count > 3)
+            {
+                user.SearchHistory.RemoveAt(user.SearchHistory.Count - 1);
+            }
+
+            var updatedUserJson = JsonSerializer.Serialize(user);
+            httpContextAccessor?.HttpContext?.Session.SetString("User", updatedUserJson);
+
+            SaveUser(user);
         }
+
 }

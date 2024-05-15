@@ -101,5 +101,55 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 2.5em;
+}
+
+.recent-searches-not-login {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.recent-searches-not-login p {
+    font-size: 1.1em;
+}
+
+.history-img {
+    height: 7em;
+    margin-bottom: 1.5em;
+}
+
+.history-link-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    height: 4em;
+    width: 28.5em;
+    padding-inline: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.history-link-button:hover {
+    background-color: #324362;
+}
+
+.history-icon-2 {
+    height: 2em;
+    filter: invert(100%);
+    margin-right: 1.5em;
+}
+
+.history-info-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

@@ -1,20 +1,39 @@
-﻿@{
+﻿@using System.Text.Json
+
+@{
     Layout = "_Layout";
+    var userJson = Context.Session.GetString("User");
+    var user = JsonSerializer.Deserialize<User>(userJson);
+    var lastSearch = user?.SearchHistory?.First();
 }
 
 <div class="results-container">
     <h2>@ViewBag.Message</h2>
 
-    <p class="not-found"><a asp-controller="" asp-action="">Return to search page</a></p>
+    @if (lastSearch != null)
+    { 
+        <a class="not-found">
+            <form method="post" asp-controller="Search" asp-action="Results" 
+                  asp-route-originCity="@lastSearch.OriginCity" 
+                  asp-route-destinationCity="@lastSearch.DestinationCity" 
+                  asp-route-flightDate="@lastSearch.FlightDate.ToString("yyyy-MM-dd")">
+                <button type="submit" class="return-to-search">Return to search page</button>
+            </form>
+        </a>
+    }
+    else
+    {
+    <p class="not-found">No recent searches available</p>
+    }
 
     <a asp-controller="User" asp-action="SavedFlights" class="go-to-search-link">
         @if (ViewBag.Message == "The flight was successfully saved!")
         {
-            <img class="result-img" src="~/images/ok-icon.png" alt="" style="height: 12em; margin-top: 5em;">
+        <img class="result-img" src="~/images/ok-icon.png" alt="" style="height: 12em; margin-top: 5em;">
         }
         else
         {
-            <img class="result-img" src="~/images/attention-icon.png" alt="">
+        <img class="result-img" src="~/images/attention-icon.png" alt="">
         }
         <button class="go-to-search">Go to saved flights</button>
     </a>

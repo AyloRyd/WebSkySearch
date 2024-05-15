@@ -1,0 +1,23 @@
+{
+  "Username": "AyloRyd",
+  "Password": "nitron228",
+  "ConfirmPassword": null,
+  "SavedFlights": [],
+  "SearchHistory": [
+    {
+      "OriginCity": "Katowice",
+      "DestinationCity": "Dortmund",
+      "FlightDate": "2024-05-30T00:00:00"
+    },
+    {
+      "OriginCity": "Dortmund",
+      "DestinationCity": "Copenhagen",
+      "FlightDate": "2024-06-05T00:00:00"
+    },
+    {
+      "OriginCity": "Tokyo",
+      "DestinationCity": "London",
+      "FlightDate": "2024-06-01T00:00:00"
+    }
+  ]
+}

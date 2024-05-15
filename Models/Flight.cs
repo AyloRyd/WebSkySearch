@@ -10,7 +10,7 @@ namespace WebSkySearch.Models
         public Airport? DestinationAirport { get; set; }
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
-        public int DurationinMinutes { get; set; }
+        public int DurationInMinutes { get; set; }
         public int TimeInDays { get; set; }
         public int StopCount { get; set; }
         public List<string?>? Carriers { get; set; }
@@ -38,7 +38,7 @@ namespace WebSkySearch.Models
                     DestinationAirport = new Airport(leg.GetProperty("destination")),
                     DepartureTime = leg.GetProperty("departure").GetDateTime(),
                     ArrivalTime = leg.GetProperty("arrival").GetDateTime(),
-                    DurationinMinutes = leg.GetProperty("durationInMinutes").GetInt32(),
+                    DurationInMinutes = leg.GetProperty("durationInMinutes").GetInt32(),
                     TimeInDays = leg.GetProperty("timeDeltaInDays").GetInt32(),
                     StopCount = leg.GetProperty("stopCount").GetInt32(),
                     Carriers = leg.GetProperty("carriers").GetProperty("marketing").EnumerateArray()
@@ -52,7 +52,7 @@ namespace WebSkySearch.Models
             return flights;
         }
 
-        public static string? ParseBookingUrl(JsonDocument doc, Flight flight)
+        public static string? ParseBookingUrl(JsonDocument doc, Flight? flight)
         {
             var optionsElement = doc.RootElement.GetProperty("data")
                 .GetProperty("itinerary").GetProperty("pricingOptions");
@@ -60,7 +60,7 @@ namespace WebSkySearch.Models
             foreach (var option in optionsElement.EnumerateArray())
             {
                 var agent = option.GetProperty("agents").EnumerateArray().First();
-                if (agent.GetProperty("name").GetString() == flight.Carriers?[0])
+                if (agent.GetProperty("name").GetString() == flight?.Carriers?[0])
                 {
                     return agent.GetProperty("url").GetString();
                 }

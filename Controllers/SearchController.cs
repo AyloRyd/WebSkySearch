@@ -7,28 +7,27 @@ namespace WebSkySearch.Controllers
 {
     public class SearchController(UserService userService, SearchService searchService) : Controller
     {
-        private readonly UserService _userService = userService;
-        
-        private readonly SearchService _searchService = searchService;
-        
         [HttpPost]
         public async Task<IActionResult> Results(string originCity, string destinationCity, 
             DateTime flightDate, string nonStop, int stops = 100)
         {
-            _userService.UpdateSearchHistory(originCity, destinationCity, flightDate);
-            
+            if (HttpContext.Session.GetString("User") != null)
+            {
+                userService.UpdateSearchHistory(originCity, destinationCity, flightDate);
+            }
+
             if (string.IsNullOrEmpty(nonStop))
             {
                 stops = 0;
             }
 
-            var origin = await _searchService.GetAirportsByCityName(originCity);
-            var destination = await _searchService.GetAirportsByCityName(destinationCity);
+            var origin = await searchService.GetAirportsByCityName(originCity);
+            var destination = await searchService.GetAirportsByCityName(destinationCity);
 
             var originAirport = origin.First();
             var destinationAirport = destination.First();
 
-            var flights = await _searchService.GetFlightsByAirports(originAirport, destinationAirport, flightDate, stops);
+            var flights = await searchService.GetFlightsByAirports(originAirport, destinationAirport, flightDate, stops);
                 
             return View(new SearchResult
             {
@@ -42,7 +41,7 @@ namespace WebSkySearch.Controllers
         public async Task<IActionResult> RedirectToBooking(string flightData)
         {
             var flight = JsonSerializer.Deserialize<Flight>(flightData);
-            return Redirect(await _searchService.GetBookingUrl(flight));
+            return Redirect(await searchService.GetBookingUrl(flight));
         }
     }
 }

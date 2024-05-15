@@ -26,6 +26,8 @@ var errorMessage = ViewBag.ErrorMessage;
     <div class="error-message">@errorMessage</div>
     }
 </form>
-
+<p class="bottom-hint">
+    <a asp-controller="User" asp-action="Login">Sign in if you already have an account</a>
+</p>
 </body>
 </html>
