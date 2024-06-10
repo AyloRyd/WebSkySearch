@@ -68,11 +68,12 @@
                 </div>
                 <div class="price-and-booking-button">
                     <p class="price">$@flight.Price</p>
-                    <form method="post" asp-controller="Search" asp-action="RedirectToBooking">
-                        <input type="hidden" name="flightData"
-                               value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))"/>
-                        <button type="submit" class="booking-url">Book</button>
-                    </form>
+                    <a asp-controller="Search" asp-action="RedirectToBooking"
+                       asp-route-flightData="@Uri.EscapeDataString(JsonSerializer.Serialize(flight))"
+                       target="_blank"
+                       class="booking-url">
+                        Book
+                    </a>
                 </div>
             </section>
         </div>

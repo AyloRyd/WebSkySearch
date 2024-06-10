@@ -16,10 +16,7 @@ namespace WebSkySearch.Controllers
                 userService.UpdateSearchHistory(originCity, destinationCity, flightDate);
             }
 
-            if (string.IsNullOrEmpty(nonStop))
-            {
-                stops = 0;
-            }
+            if (string.IsNullOrEmpty(nonStop)) stops = 0;
 
             var origin = await searchService.GetAirportsByCityName(originCity);
             var destination = await searchService.GetAirportsByCityName(destinationCity);
@@ -27,7 +24,8 @@ namespace WebSkySearch.Controllers
             var originAirport = origin.First();
             var destinationAirport = destination.First();
 
-            var flights = await searchService.GetFlightsByAirports(originAirport, destinationAirport, flightDate, stops);
+            var flights = await searchService
+                .GetFlightsByAirports(originAirport, destinationAirport, flightDate, stops);
                 
             return View(new SearchResult
             {
@@ -37,11 +35,24 @@ namespace WebSkySearch.Controllers
             });
         }
         
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> RedirectToBooking(string flightData)
         {
-            var flight = JsonSerializer.Deserialize<Flight>(flightData);
-            return Redirect(await searchService.GetBookingUrl(flight));
+            var decodedFlightData = Uri.UnescapeDataString(flightData);
+            var flight = JsonSerializer.Deserialize<Flight>(decodedFlightData);
+            var bookingUrl = await searchService.GetBookingUrl(flight);
+            return bookingUrl != null ? Redirect(bookingUrl) : View("Error");
+        }
+        
+        [HttpGet]
+        public JsonResult GetCities(string term)
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cities.txt");
+            var cities = System.IO.File.ReadAllLines(filePath)
+                .Where(city => city.StartsWith(term, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            return Json(cities);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices.JavaScript;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using WebSkySearch.Models;
@@ -12,7 +11,7 @@ public class UserController(UserService userService) : Controller
     public IActionResult Login() => View();
 
         public IActionResult Register() => View();
-
+        
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
@@ -84,9 +83,10 @@ public class UserController(UserService userService) : Controller
             if (user.SavedFlights.All(f => f.Id != flight?.Id) && flight is not null)
             {
                 user.SavedFlights.Add(flight); 
-                ViewBag.Message = "The flight was successfully saved!";
                 userService.SaveUser(user);
                 HttpContext.Session.SetString("User", JsonSerializer.Serialize(user));
+                
+                ViewBag.Message = "The flight was successfully saved!";
             }
             return View();
         }

@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-
-namespace WebSkySearch.Models;
+﻿namespace WebSkySearch.Models;
 
 public class User
 {

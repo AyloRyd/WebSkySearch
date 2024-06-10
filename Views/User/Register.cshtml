@@ -17,10 +17,10 @@ var errorMessage = ViewBag.ErrorMessage;
 </div>
 
 <form method="post" asp-controller="User" asp-action="Register">
-    <input type="text" name="username" placeholder="Username" required />
-    <input type="password" name="password" placeholder="Password" required />
-    <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
-    <button type="submit">Sign up</button>
+    <input type="text" name="username" placeholder="Username" required autocomplete="off"/>
+    <input type="password" name="password" placeholder="Password" required autocomplete="off"/>
+    <input type="password" name="confirmPassword" placeholder="Confirm Password" required autocomplete="off"/>
+    <button type="submit">Register</button>
     @if (!string.IsNullOrEmpty(errorMessage))
     {
     <div class="error-message">@errorMessage</div>

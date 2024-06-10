@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EoN3RnXqP5IzHm5fs2tE1CuOY+iWEGBks7Not3Z/Yyw=",
+  "Hash": "ZvBeQFQB0tZjwq1WJOHOhcDq5J9qSYHxrxkcpHURTAE=",
   "Source": "WebSkySearch",
   "BasePath": "_content/WebSkySearch",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\_Layout.css"
+    },
+    {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\autocomplete.css",
+      "SourceId": "WebSkySearch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
+      "BasePath": "_content/WebSkySearch",
+      "RelativePath": "css/autocomplete.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\autocomplete.css"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\Index.css",
@@ -226,6 +245,25 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\no-results-icon.png",
+      "SourceId": "WebSkySearch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
+      "BasePath": "_content/WebSkySearch",
+      "RelativePath": "images/no-results-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\no-results-icon.png"
+    },
+    {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\ok-icon.png",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
@@ -302,12 +340,12 @@
       "OriginalItemSpec": "wwwroot\\images\\user-icon.png"
     },
     {
-      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\js\\autocomplete.js",
       "SourceId": "WebSkySearch",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\",
       "BasePath": "_content/WebSkySearch",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/autocomplete.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -318,7 +356,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\autocomplete.js"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\_Layout.css"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\css\\autocomplete.css",
+      "PackagePath": "staticwebassets\\css\\autocomplete.css"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -45,6 +49,10 @@
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\no-results-icon.png",
+      "PackagePath": "staticwebassets\\images\\no-results-icon.png"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\images\\ok-icon.png",
       "PackagePath": "staticwebassets\\images\\ok-icon.png"
     },
@@ -61,8 +69,8 @@
       "PackagePath": "staticwebassets\\images\\user-icon.png"
     },
     {
-      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\js\\autocomplete.js",
+      "PackagePath": "staticwebassets\\js\\autocomplete.js"
     },
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Документы\\ХНУРЕ\\Course Project\\WebSkySearch\\wwwroot\\lib\\bootstrap\\LICENSE",

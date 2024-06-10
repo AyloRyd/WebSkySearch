@@ -17,9 +17,9 @@
 </div>
 
 <form method="post" asp-controller="User" asp-action="Login">
-    <input type="text" name="username" placeholder="Username" required/>
-    <input type="password" name="password" placeholder="Password" required/>
-    <button type="submit">Sign in</button>
+    <input type="text" name="username" placeholder="Username" required autocomplete="off"/>
+    <input type="password" name="password" placeholder="Password" required autocomplete="off"/>
+    <button type="submit">Login</button>
     @if (!string.IsNullOrEmpty(errorMessage))
     {
         <div class="error-message">@errorMessage</div>

@@ -86,41 +86,13 @@
       ],
       "Price": 48.89,
       "Segments": null
-    },
-    {
-      "Id": "10487-2407011105--32332-0-11235-2407011150",
-      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiQ0dOIiwiZCI6IkVESSIsImQxIjoiMjAyNC0wNy0wMSJ9",
-      "OriginAirport": {
-        "Name": "Cologne",
-        "Code": "CGN",
-        "Id": "95673544",
-        "City": "Cologne",
-        "Country": "Germany"
-      },
-      "DestinationAirport": {
-        "Name": "Edinburgh",
-        "Code": "EDI",
-        "Id": "95673668",
-        "City": "Edinburgh",
-        "Country": "United Kingdom"
-      },
-      "DepartureTime": "2024-07-01T11:05:00",
-      "ArrivalTime": "2024-07-01T11:50:00",
-      "DurationInMinutes": 105,
-      "TimeInDays": 0,
-      "StopCount": 0,
-      "Carriers": [
-        "Eurowings"
-      ],
-      "Price": 179.99,
-      "Segments": null
     }
   ],
   "SearchHistory": [
     {
-      "OriginCity": "Kyiv",
-      "DestinationCity": "Warsaw",
-      "FlightDate": "2024-06-20T00:00:00"
+      "OriginCity": "London",
+      "DestinationCity": "Paris",
+      "FlightDate": "2024-06-30T00:00:00"
     },
     {
       "OriginCity": "Cologne",
@@ -128,9 +100,9 @@
       "FlightDate": "2024-07-01T00:00:00"
     },
     {
-      "OriginCity": "London",
-      "DestinationCity": "Paris",
-      "FlightDate": "2024-06-30T00:00:00"
+      "OriginCity": "Beijing",
+      "DestinationCity": "Tokyo",
+      "FlightDate": "2024-05-29T00:00:00"
     }
   ]
 }

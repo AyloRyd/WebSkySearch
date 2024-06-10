@@ -1,0 +1,37 @@
+﻿:root {
+    --bd-color-first: #1d1d1d;
+    --bd-color-second: #252525;
+    --shadow-color: #151515;
+    --dark-blue: #272936;
+    --light-blue: #21e6ff;
+    --dark-green: #005B41;
+    --light-green: #008170;
+    --link-gray: #a8a8a8;
+    --input-gray: #4e565f;
+}
+
+.autocomplete-items {
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 16px;
+    background-color: var(--bd-color-second);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 225px; 
+    overflow-y: auto;
+}
+
+.autocomplete-item {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--bd-color-second);
+    border-radius: 12px; 
+}
+
+.autocomplete-item:hover {
+    /*color: var(--light-green);*/
+    background-color: #343434;
+}

@@ -3,7 +3,7 @@ using WebSkySearch.Models;
 
 namespace WebSkySearch.Services
 {
-    public class SearchService(string apiHost, string apiKey)
+    public class SearchService(string? apiHost, string? apiKey)
     {
         private static HttpClient Client { get; } = new();
 
@@ -81,13 +81,13 @@ namespace WebSkySearch.Services
             return Flight.ParseBookingUrl(doc, flight);
         }
 
-        public async Task<List<Flight>?> GetFlightsByAirports(Airport origin, Airport destination, DateTime date, int stops = 0)
+        public async Task<List<Flight>?> GetFlightsByAirports(Airport origin, Airport destination, 
+            DateTime date, int stops = 0)
         {
             var body = await GetFlightsByEntityId(origin.Id, destination.Id, date);
             if (body is null) return null;
 
             var doc = JsonDocument.Parse(body);
-
             var flights = Flight.ParseFlights(doc, stops);
 
             return [.. flights.OrderBy(flight => flight.DepartureTime)];

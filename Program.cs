@@ -2,7 +2,7 @@ using WebSkySearch.Services;
 
 namespace WebSkySearch
 {
-    public class Program
+    public abstract class Program
     {
         public static void Main(string[] args)
         {
@@ -22,7 +22,7 @@ namespace WebSkySearch
             builder.Services.AddScoped<UserService>();
             var searchServiceConfig = builder.Configuration.GetSection("SearchService");
             builder.Services.AddScoped(_ => 
-                new SearchService(searchServiceConfig["ApiHost"], searchServiceConfig["ApiKey"]));
+                new SearchService(searchServiceConfig["apiHost"], searchServiceConfig["apiKey"]));
 
             var app = builder.Build();
 

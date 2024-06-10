@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/css/SaveFlight.css">
     <link rel="stylesheet" href="~/css/SavedFlights.css">
     <link rel="icon" href="~/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/autocomplete.css" />
     <title>Sky Search</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
                 {
                 <a asp-controller="User" asp-action="SavedFlights">Saved Flights</a>
                 <a asp-controller="User" asp-action="Logout" class="logout">Logout</a>
-                
+
                 var userJson = Context.Session.GetString("User");
                 var user = JsonSerializer.Deserialize<User>(userJson);
                 <span class="username">
@@ -48,8 +49,11 @@
 
 <footer>
     <p>
-        2024 - Sky Search - no rights reserved
+        @@ 2024 Sky Search. All rights reserved.
     </p>
 </footer>
+
+<script src="~/js/autocomplete.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
