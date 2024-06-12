@@ -4,20 +4,20 @@ namespace WebSkySearch.Models
 {
     public class Flight
     {
-        public string? Id { get; set; }
-        public string? Token { get; set; }
-        public Airport? OriginAirport { get; set; }
-        public Airport? DestinationAirport { get; set; }
-        public DateTime DepartureTime { get; set; }
-        public DateTime ArrivalTime { get; set; }
-        public int DurationInMinutes { get; set; }
-        public int TimeInDays { get; set; }
-        public int StopCount { get; set; }
-        public List<string?>? Carriers { get; set; }
-        public decimal Price { get; set; }
-        public List<Segment>? Segments { get; set; }
+        public string? Id { get; init; }
+        public string? Token { get; init; }
+        public Airport? OriginAirport { get; init; }
+        public Airport? DestinationAirport { get; init; }
+        public DateTime DepartureTime { get; init; }
+        public DateTime ArrivalTime { get; init; }
+        public int DurationInMinutes { get; init; }
+        public int TimeInDays { get; init; }
+        public int StopCount { get; init; }
+        public List<string?>? Carriers { get; init; }
+        public decimal Price { get; init; }
+        public List<Segment>? Segments { get; init; }
         
-        public static List<Flight> ParseFlights(JsonDocument doc, int stops)
+        public static IEnumerable<Flight> ParseFlights(JsonDocument doc, int stops)
         {
             List<Flight> flights = [];
             
@@ -42,27 +42,40 @@ namespace WebSkySearch.Models
                         .Select(carrier => carrier.GetProperty("name").GetString())
                         .ToList(),
                     Price = element.GetProperty("price").GetProperty("raw").GetDecimal(),
-                    Segments = leg.GetProperty("stopCount").GetInt32() != 0 ? Segment.ParseSegments(leg.GetProperty("segments").EnumerateArray()) : null
+                    Segments = leg.GetProperty("stopCount").GetInt32() != 0 ? 
+                        Segment.ParseSegments(leg.GetProperty("segments").EnumerateArray()) : null
                 });
 
             return flights;
         }
 
-        public static string? ParseBookingUrl(JsonDocument doc, Flight? flight)
+        public static string? ParseBookingUrl(JsonDocument doc, FlightData? flightData)
         {
             var optionsElement = doc.RootElement.GetProperty("data")
-                .GetProperty("itinerary").GetProperty("pricingOptions");
+                .GetProperty("itinerary").GetProperty("pricingOptions").EnumerateArray();
 
-            foreach (var option in optionsElement.EnumerateArray())
+            string? tripComUrl = null, carrierUrl = null;
+            foreach (var option in optionsElement)
             {
                 var agent = option.GetProperty("agents").EnumerateArray().First();
-                if (agent.GetProperty("name").GetString() == flight?.Carriers?[0])
+                var agentName = agent.GetProperty("name").GetString();
+
+                if (agentName == "Trip.com")
                 {
-                    return agent.GetProperty("url").GetString();
+                    tripComUrl = agent.GetProperty("url").GetString();
+                    break; 
+                }
+        
+                if (agentName == flightData?.Carriers?[0] && carrierUrl == null)
+                {
+                    carrierUrl = agent.GetProperty("url").GetString();
+                    break;
                 }
             }
 
-            return optionsElement.EnumerateArray().First().GetProperty("url").GetString();
+            return tripComUrl ?? carrierUrl ?? optionsElement.First()
+                .GetProperty("agents").EnumerateArray().First()
+                .GetProperty("url").GetString();
         }
     }
 

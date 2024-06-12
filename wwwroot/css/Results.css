@@ -82,12 +82,24 @@
     font-weight: 400;
 }
 
+.transfers-time-container {
+    display: flex; 
+    flex-direction: column;
+    transform: scale(0.6);
+}
+
 .airport {
     grid-column: 3/4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
+    font-weight: 600;
+    font-size: 1.7em;
     display: flex;
     align-items: center;
+}
+
+.transfers-airport {
+    font-weight: normal;
+    font-size: 1.2em;
 }
 
 .timeline {
@@ -97,6 +109,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.transfers-timeline {
+    grid-row: 2 / 5;
+}
+
+.transfers-2-timeline {
+    grid-row: 2 / 6;
 }
 
 .circle-bottom, .circle-top {
@@ -116,8 +136,16 @@
 
 .line {
     width: 0.125em;
-    height: 3.125em;
+    height: 2.5em;
     background-color: white;
+}
+
+.transfers-line {
+    height: 3.7em;
+}
+
+.transfers-2-line {
+    height: 4.25em;
 }
 
 .bottom-border {
@@ -187,3 +215,7 @@
     background-color: var(--light-green);
     padding-inline: 2em;
 }
+
+/*.flights-with-transfers {*/
+/*    display: none;*/
+/*}*/

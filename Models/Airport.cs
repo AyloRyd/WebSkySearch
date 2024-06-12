@@ -5,9 +5,9 @@ namespace WebSkySearch.Models
     public class Airport
     {
         public string? Name { get; set; }
-        public string? Code { get; set; }
-        public string? Id { get; set; }
-        public string? City { get; set; }
+        public string? Code { get; init; }
+        public string? Id { get; init; }
+        public string? City { get; init; }
         public string? Country { get; set; }
 
         public Airport() { }

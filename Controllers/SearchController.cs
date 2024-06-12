@@ -8,15 +8,12 @@ namespace WebSkySearch.Controllers
     public class SearchController(UserService userService, SearchService searchService) : Controller
     {
         [HttpPost]
-        public async Task<IActionResult> Results(string originCity, string destinationCity, 
-            DateTime flightDate, string nonStop, int stops = 100)
+        public async Task<IActionResult> Results(string originCity, string destinationCity, DateTime flightDate, int stops = 2)
         {
             if (HttpContext.Session.GetString("User") != null)
             {
                 userService.UpdateSearchHistory(originCity, destinationCity, flightDate);
             }
-
-            if (string.IsNullOrEmpty(nonStop)) stops = 0;
 
             var origin = await searchService.GetAirportsByCityName(originCity);
             var destination = await searchService.GetAirportsByCityName(destinationCity);
@@ -39,7 +36,7 @@ namespace WebSkySearch.Controllers
         public async Task<IActionResult> RedirectToBooking(string flightData)
         {
             var decodedFlightData = Uri.UnescapeDataString(flightData);
-            var flight = JsonSerializer.Deserialize<Flight>(decodedFlightData);
+            var flight = JsonSerializer.Deserialize<FlightData>(decodedFlightData);
             var bookingUrl = await searchService.GetBookingUrl(flight);
             return bookingUrl != null ? Redirect(bookingUrl) : View("Error");
         }

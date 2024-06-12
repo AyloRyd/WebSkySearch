@@ -57,14 +57,14 @@ namespace WebSkySearch.Services
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async Task<string?> GetBookingUrl(Flight? flight)
+        public async Task<string?> GetBookingUrl(FlightData? flightData)
         {
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
                 RequestUri = new Uri($"https://{apiHost}/flights/detail?" +
-                                     $"token={flight?.Token?.Replace("=", "%3D")}&" +
-                                     $"itineraryId={flight?.Id}"),
+                                     $"token={flightData?.Token?.Replace("=", "%3D")}&" +
+                                     $"itineraryId={flightData?.Id}"),
                 Headers =
                 {
                     { "X-RapidAPI-Key", apiKey },
@@ -78,11 +78,10 @@ namespace WebSkySearch.Services
             var body = await response.Content.ReadAsStringAsync();
             var doc = JsonDocument.Parse(body);
 
-            return Flight.ParseBookingUrl(doc, flight);
+            return Flight.ParseBookingUrl(doc, flightData);
         }
 
-        public async Task<List<Flight>?> GetFlightsByAirports(Airport origin, Airport destination, 
-            DateTime date, int stops = 0)
+        public async Task<List<Flight>?> GetFlightsByAirports(Airport origin, Airport destination, DateTime date, int stops)
         {
             var body = await GetFlightsByEntityId(origin.Id, destination.Id, date);
             if (body is null) return null;

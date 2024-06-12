@@ -2,7 +2,7 @@
 
 public class SearchRequest
 {
-    public string? OriginCity { get; set; }
-    public string? DestinationCity { get; set; }
-    public DateTime FlightDate { get; set; }
+    public string? OriginCity { get; init; }
+    public string? DestinationCity { get; init; }
+    public DateTime FlightDate { get; init; }
 }
