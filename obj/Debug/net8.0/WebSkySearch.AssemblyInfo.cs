@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebSkySearch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e27af13f02634a480b296d0e629010c7470899dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6155ff707301188fd2a5b97d6d2f7ac24142158")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebSkySearch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebSkySearch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

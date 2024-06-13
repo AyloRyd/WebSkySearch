@@ -46,8 +46,7 @@ namespace WebSkySearch.Controllers
         {
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cities.txt");
             var cities = System.IO.File.ReadAllLines(filePath)
-                .Where(city => city.StartsWith(term, StringComparison.OrdinalIgnoreCase))
-                .ToList();
+                .Where(city => city.StartsWith(term, StringComparison.OrdinalIgnoreCase)).ToList();
 
             return Json(cities);
         }

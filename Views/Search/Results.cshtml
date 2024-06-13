@@ -2,14 +2,14 @@
 @model SearchResult
 
 <div class="results-container">
-    @if (Model?.Flights?.Count == 0)
+    @if (Model.Flights.Count == 0)
     {
         <img src="~/images/no-results-icon.png" alt="" class="not-found-img"/>
         <p class="not-found">No flights found :(</p>
     }
     else
     {
-        @foreach (var flight in Model.Flights.Where(flight => flight.StopCount == 0))
+        @foreach (var flight in Model.Flights.OrderBy(flight => flight.StopCount))
         {
             <div class="flight-card">
                 <div class="first-row">
@@ -34,46 +34,112 @@
                     <span class="time-day">@flight.DepartureTime.ToString("(dd.MM)")</span>
                 </p>
 
-                <div class="timeline">
-                    <div class="circle-top"></div>
-                    <div class="line"></div>
-                    <div class="circle-bottom"></div>
-                </div>
+                @switch (flight.StopCount)
+                {
+                    case 0:
+                        <div class="timeline">
+                            <div class="circle-top"></div>
+                            <div class="line"></div>
+                            <div class="circle-bottom"></div>
+                        </div>
+                        break;
+                    case 1:
+                        <div class="timeline transfers-timeline">
+                            <div class="circle-top"></div>
+                            <div class="line transfers-line"></div>
+                            <div class="circle-top"></div>
+                            <div class="line transfers-line"></div>
+                            <div class="circle-bottom"></div>
+                        </div>
+                        break;
+                    case 2:
+                        <div class="timeline transfers-2-timeline">
+                            <div class="circle-top"></div>
+                            <div class="line transfers-2-line"></div>
+                            <div class="circle-top"></div>
+                            <div class="line transfers-2-line"></div>
+                            <div class="circle-top"></div>
+                            <div class="line transfers-2-line"></div>
+                            <div class="circle-bottom"></div>
+                        </div>
+                        break;
+                }
 
-                <p class="airport">@flight.OriginAirport.City (@flight.OriginAirport.Code)</p>
+                <p class="airport">@flight?.OriginAirport?.City (@flight?.OriginAirport?.Code)</p>
+
+                @if (flight?.StopCount > 0)
+                {
+                    <div class="transfers-time-container">
+                        <p class="time">
+                            @flight?.Segments?[0].ArrivalTime.ToString("HH:mm")
+                            <span class="time-day">@flight?.Segments?[0].ArrivalTime.ToString("(dd.MM)")</span>
+                        </p>
+
+                        <p class="time">
+                            @flight?.Segments?[1].DepartureTime.ToString("HH:mm")
+                            <span class="time-day">@flight?.Segments?[1].DepartureTime.ToString("(dd.MM)")</span>
+                        </p>
+                    </div>
+
+                    var firstTransferTime = flight?.Segments?[1].DepartureTime - flight?.Segments?[0].ArrivalTime;
+                    <p class="airport transfers-airport">
+                        @flight?.Segments?[0]?.DestinationAirport?.City
+                        (@(firstTransferTime.Value.Hours > 0 ? $"{firstTransferTime.Value.Hours} hours" : "")
+                        @(firstTransferTime.Value.Minutes > 0 ? $"{firstTransferTime.Value.Minutes} minutes" : ""))
+                    </p>
+                }
+
+                @if (flight?.StopCount == 2)
+                {
+                    <div class="transfers-time-container">
+                        <p class="time">
+                            @flight?.Segments?[1].ArrivalTime.ToString("HH:mm")
+                            <span class="time-day">@flight?.Segments?[1].ArrivalTime.ToString("(dd.MM)")</span>
+                        </p>
+
+                        <p class="time">
+                            @flight?.Segments?[2].DepartureTime.ToString("HH:mm")
+                            <span class="time-day">@flight?.Segments?[2].DepartureTime.ToString("(dd.MM)")</span>
+                        </p>
+                    </div>
+
+                    var secondTransferTime = flight?.Segments?[2].DepartureTime - flight?.Segments?[1].ArrivalTime;
+                    <p class="airport transfers-airport">
+                        @flight?.Segments?[1]?.DestinationAirport?.City
+                        (@secondTransferTime.Value.Hours hours @secondTransferTime.Value.Minutes minutes)
+                    </p>
+                }
 
                 <p class="time">
-                    @flight.ArrivalTime.ToString("HH:mm")
-                    <span class="time-day">@flight.ArrivalTime.ToString("(dd.MM)")</span>
+                    @flight?.ArrivalTime.ToString("HH:mm")
+                    <span class="time-day">@flight?.ArrivalTime.ToString("(dd.MM)")</span>
                 </p>
 
-                <p class="airport">@flight.DestinationAirport.City (@flight.DestinationAirport.Code)</p>
+                <p class="airport">@flight?.DestinationAirport?.City (@flight?.DestinationAirport?.Code)</p>
 
                 <div class="bottom-border"></div>
 
                 <section class="bottom-information">
                     <div class="transfers-and-duration">
-                        <p class="transfers">@flight.StopCount transfers</p>
+                        @{
+                            var transfers = $"{flight?.StopCount} transfer{(flight?.StopCount == 1 ? "" : "s")}";
+                        }
+                        <p class="transfers">@transfers</p>
 
                         @{
-                        int totalMinutes = flight.DurationInMinutes;
-                        int days = totalMinutes / (24 * 60);
-                        int hours = (totalMinutes % (24 * 60)) / 60;
-                        int minutes = totalMinutes % 60;
-
-                        string formattedHours = (days * 24 + hours).ToString();
-                        string formattedMinutes = minutes > 9 ? minutes.ToString() : "0" + minutes;
+                            var duration = TimeSpan.FromMinutes(flight.DurationInMinutes);
+                            var formattedTime = $"{(int)duration.TotalHours}:{duration.Minutes:D2}";
                         }
-                        <p class="duration">@formattedHours:@formattedMinutes Hours.</p>
+                        <p class="duration">@formattedTime Hours.</p>
                     </div>
-                    
+
                     @{
-                    var flightData = new FlightData
-                    {
-                    Id = flight.Id,
-                    Token = flight.Token,
-                    Carriers = flight.Carriers
-                    };
+                        var flightData = new FlightData
+                        {
+                            Id = flight.Id,
+                            Token = flight.Token,
+                            Carriers = flight.Carriers
+                        };
                     }
                     <div class="price-and-booking-button">
                         <p class="price">$@flight.Price</p>
@@ -87,177 +153,5 @@
                 </section>
             </div>
         }
-
-        @* <button class="show-flights-with-transfers" onclick="showTransfers()"> *@
-        @*     Show flights with transfers *@
-        @* </button> *@
-
-        <div class="flights-with-transfers">
-            @{
-                var flightsWithTransfers = Model.Flights.Where(flight => flight.StopCount != 0);
-            }
-            @if (flightsWithTransfers.ToList().Count != 0)
-            {
-                <div class="flights-with-transfers-found">
-                    @foreach (var flight in flightsWithTransfers.OrderBy(flight => flight.StopCount))
-                    {
-                        <div class="flight-card">
-                            <div class="first-row">
-                                <div class="carriers-container">
-                                    <div class="carriers">@string.Join(", ", flight.Carriers)</div>
-                                </div>
-
-                                @if (Context.Session.GetString("User") != null)
-                                {
-                                    <div>
-                                        <form method="post" asp-controller="User" asp-action="SaveFlight">
-                                            <input type="hidden" name="flightData"
-                                                   value="@Html.Raw(Html.Encode(JsonSerializer.Serialize(flight)))"/>
-                                            <button type="submit" class="save-flight-button">Save</button>
-                                        </form>
-                                    </div>
-                                }
-                            </div>
-
-                            <p class="time">
-                                @flight.DepartureTime.ToString("HH:mm")
-                                <span class="time-day">@flight.DepartureTime.ToString("(dd.MM)")</span>
-                            </p>
-                            
-                            @if (flight.StopCount == 1)
-                            {
-                                <div class="timeline transfers-timeline">
-                                    <div class="circle-top"></div>
-                                    <div class="line transfers-line"></div>
-                                    <div class="circle-top"></div>
-                                    <div class="line transfers-line"></div>
-                                    <div class="circle-bottom"></div>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="timeline transfers-2-timeline">
-                                    <div class="circle-top"></div>
-                                    <div class="line transfers-2-line"></div>
-                                    <div class="circle-top"></div>
-                                    <div class="line transfers-2-line"></div>
-                                    <div class="circle-top"></div>
-                                    <div class="line transfers-2-line"></div>
-                                    <div class="circle-bottom"></div>
-                                </div>
-                            }
-
-                            <p class="airport">@flight.OriginAirport.City (@flight.OriginAirport.Code)</p>
-
-                            <div class="transfers-time-container">
-                                <p class="time" >
-                                    @flight?.Segments?[0].ArrivalTime.ToString("HH:mm")
-                                    <span class="time-day">@flight?.Segments?[0].ArrivalTime.ToString("(dd.MM)")</span>
-                                </p>
-                                
-                                <p class="time" >
-                                    @flight?.Segments?[1].DepartureTime.ToString("HH:mm")
-                                    <span class="time-day">@flight?.Segments?[1].DepartureTime.ToString("(dd.MM)")</span>
-                                </p>
-                            </div>
-                            
-                            @{
-                                var transferTime = flight?.Segments?[1].DepartureTime - flight?.Segments?[0].ArrivalTime;
-                            }
-                            <p class="airport transfers-airport">
-                                @flight?.Segments?[0]?.DestinationAirport?.City 
-                                (@(transferTime.Value.Hours > 0 ? $"{transferTime.Value.Hours} hours" : "")
-                                @(transferTime.Value.Minutes > 0 ? $"{transferTime.Value.Minutes} minutes" : ""))
-                            </p>
-                            
-                            @if (flight.StopCount == 2)
-                            {
-                                <div class="transfers-time-container">
-                                    <p class="time" >
-                                        @flight?.Segments?[1].ArrivalTime.ToString("HH:mm")
-                                        <span class="time-day">@flight?.Segments?[1].ArrivalTime.ToString("(dd.MM)")</span>
-                                    </p>
-                                
-                                    <p class="time" >
-                                        @flight?.Segments?[2].DepartureTime.ToString("HH:mm")
-                                        <span class="time-day">@flight?.Segments?[2].DepartureTime.ToString("(dd.MM)")</span>
-                                    </p>
-                                </div>
-                            
-                                var transferTime2 = flight?.Segments?[2].DepartureTime - flight?.Segments?[1].ArrivalTime;
-                                <p class="airport transfers-airport">
-                                    @flight?.Segments?[1]?.DestinationAirport?.City 
-                                        (@transferTime2.Value.Hours hours @transferTime2.Value.Minutes minutes)
-                                </p>
-                            }
-                            
-                            <p class="time">
-                                @flight.ArrivalTime.ToString("HH:mm")
-                                <span class="time-day">@flight.ArrivalTime.ToString("(dd.MM)")</span>
-                            </p>
-
-                            <p class="airport">@flight.DestinationAirport.City (@flight.DestinationAirport.Code)</p>
-
-                            <div class="bottom-border"></div>
-
-                            <section class="bottom-information">
-                                <div class="transfers-and-duration">
-                                    @{
-                                        var transfers = flight.StopCount == 1 ? 
-                                            flight.StopCount + " transfer" : @flight.StopCount + " transfers";
-                                    }
-                                    <p class="transfers">@transfers</p>
-
-                                    @{
-                                    int totalMinutes = flight.DurationInMinutes;
-                                    int days = totalMinutes / (24 * 60);
-                                    int hours = (totalMinutes % (24 * 60)) / 60;
-                                    int minutes = totalMinutes % 60;
-
-                                    string formattedHours = (days * 24 + hours).ToString();
-                                    string formattedMinutes = minutes > 9 ? minutes.ToString() : "0" + minutes;
-                                    }
-                                    <p class="duration">@formattedHours:@formattedMinutes Hours.</p>
-                                </div>
-
-                                @{
-                                    var flightData = new FlightData
-                                    {
-                                        Id = flight.Id,
-                                        Token = flight.Token,
-                                        Carriers = flight.Carriers
-                                    };
-                                }
-                                <div class="price-and-booking-button">
-                                    <p class="price">$@flight.Price</p>
-                                    <a asp-controller="Search" asp-action="RedirectToBooking"
-                                       asp-route-flightData="@Uri.EscapeDataString(JsonSerializer.Serialize(flightData))"
-                                       target="_blank"
-                                       class="booking-url">
-                                        Book
-                                    </a>
-                                </div>
-                            </section>
-                        </div>
-                    }
-                </div>
-            }
-
-            @* else *@
-            @* { *@
-            @*     <div class="flights-with-transfers-not-found"> *@
-            @*         <p>No flights with transfers found :(</p> *@
-            @*     </div> *@
-            @* } *@
-        </div>
     }
 </div>
-
-@* @section Scripts { *@
-@*     <script> *@
-@*         function showTransfers() { *@
-@*             document.querySelector('.show-flights-with-transfers').style.display = 'none'; *@
-@*             document.querySelector('.flights-with-transfers').style.display = 'block'; *@
-@*         } *@
-@*     </script> *@
-@* } *@

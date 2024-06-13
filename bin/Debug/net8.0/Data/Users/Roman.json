@@ -186,6 +186,77 @@
           "Carrier": "easyJet"
         }
       ]
+    },
+    {
+      "Id": "11149-2406200615--32090-1-10694-2406201205",
+      "Token": "eyJhIjoxLCJjIjowLCJpIjowLCJjYyI6ImVjb25vbXkiLCJvIjoiRFRNIiwiZCI6IkNQSCIsImQxIjoiMjAyNC0wNi0yMCJ9",
+      "OriginAirport": {
+        "Name": "Dortmund",
+        "Code": "DTM",
+        "Id": "95673546",
+        "City": "Dortmund",
+        "Country": "Germany"
+      },
+      "DestinationAirport": {
+        "Name": "Copenhagen",
+        "Code": "CPH",
+        "Id": "95673519",
+        "City": "Copenhagen",
+        "Country": "Denmark"
+      },
+      "DepartureTime": "2024-06-20T06:15:00",
+      "ArrivalTime": "2024-06-20T12:05:00",
+      "DurationInMinutes": 350,
+      "TimeInDays": 0,
+      "StopCount": 1,
+      "Carriers": [
+        "Lufthansa"
+      ],
+      "Price": 440.36,
+      "Segments": [
+        {
+          "Id": "11149-14385-2406200615-2406200720--32090",
+          "OriginAirport": {
+            "Name": "Dortmund",
+            "Code": "DTM",
+            "Id": null,
+            "City": "Dortmund",
+            "Country": "Germany"
+          },
+          "DestinationAirport": {
+            "Name": "Munich",
+            "Code": "MUC",
+            "Id": null,
+            "City": "Munich",
+            "Country": "Germany"
+          },
+          "DepartureTime": "2024-06-20T06:15:00",
+          "ArrivalTime": "2024-06-20T07:20:00",
+          "DurationInMinutes": 65,
+          "Carrier": "Lufthansa"
+        },
+        {
+          "Id": "14385-10694-2406201030-2406201205--32090",
+          "OriginAirport": {
+            "Name": "Munich",
+            "Code": "MUC",
+            "Id": null,
+            "City": "Munich",
+            "Country": "Germany"
+          },
+          "DestinationAirport": {
+            "Name": "Copenhagen",
+            "Code": "CPH",
+            "Id": null,
+            "City": "Copenhagen",
+            "Country": "Germany"
+          },
+          "DepartureTime": "2024-06-20T10:30:00",
+          "ArrivalTime": "2024-06-20T12:05:00",
+          "DurationInMinutes": 95,
+          "Carrier": "Lufthansa"
+        }
+      ]
     }
   ],
   "SearchHistory": [
@@ -195,13 +266,13 @@
       "FlightDate": "2024-06-20T00:00:00"
     },
     {
-      "OriginCity": "Katowice",
-      "DestinationCity": "Dortmund",
-      "FlightDate": "2024-06-25T00:00:00"
-    },
-    {
       "OriginCity": "Paris",
       "DestinationCity": "London",
+      "FlightDate": "2024-06-20T00:00:00"
+    },
+    {
+      "OriginCity": "Katowice",
+      "DestinationCity": "Dortmund",
       "FlightDate": "2024-06-25T00:00:00"
     }
   ]
